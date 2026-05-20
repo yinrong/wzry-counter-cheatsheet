@@ -1,163 +1,106 @@
 #!/usr/bin/env python3
 """
-从公开 API 拉取实时克制关系数据, 反向推导 + 同类补全到 >= 3+3.
+从王者营地国服API拉取真实对战统计克制数据.
 
 数据源:
-  https://qing762.is-a.dev/api/wangzhe
-  (基于 pvp.qq.com 官方英雄详情页爬取, 实时更新)
+  https://kohcamp.qq.com/hero/getheroextrainfo
+  国服王者营地 · 基于真实对局统计
 
-策略:
-  1. 官方每英雄给 2 个 suppressingHeroes + 2 个 suppressedHeroes
-  2. 反向推导: 如果 A 克制 B, 则 B 被 A 克制 (即使 B 的 suppressedHeroes 里没列 A)
-  3. 同类补全: 如果英雄仍不够 3 个, 用同定位英雄的高频克制对象补全
+输出:
+  data/counters.json - 每英雄 3 克制 + 3 被克制, 带克制率(%)
 
-输出: data/counters.json (格式不变)
+角标含义:
+  数字 = 克制率 (对该英雄的胜率优势百分比, 越高克制越明显)
 """
 import json
+import time
 import urllib.request
 from pathlib import Path
-from collections import defaultdict
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / 'data'
 
-API_URL = 'https://qing762.is-a.dev/api/wangzhe'
+HERO_LIST_URL = "https://pvp.qq.com/web201605/js/herolist.json"
+API_URL = "https://kohcamp.qq.com/hero/getheroextrainfo"
+TOKEN_URL = "https://api.t1qq.com/api/tool/wzrr/wztoken"
 
-TYPE_MAP = {1: '战士', 2: '法师', 3: '坦克', 4: '刺客', 5: '射手', 6: '辅助'}
-
-
-def fetch():
-    print(f'fetching {API_URL} ...')
-    req = urllib.request.Request(API_URL, headers={'User-Agent': 'wzry-cheatsheet/1.0'})
-    with urllib.request.urlopen(req, timeout=30) as resp:
-        raw = json.loads(resp.read().decode('utf-8'))
-    return raw
-
-
-def build_counter_graph(main, heroes_json):
-    """构建完整克制关系图, 带权重 (3=双向确认, 2=单向官方, 1=推断)."""
-    # 先收集原始"谁说了什么"
-    # forward[A][B] = True means A's page says A suppresses B
-    # backward[A][B] = True means A's page says B suppresses A
-    forward = defaultdict(set)   # A suppresses B (from A's page)
-    backward = defaultdict(set)  # B suppresses A (from A's page)
-
-    for name, hero in main.items():
-        for target in hero.get('suppressingHeroes', {}).keys():
-            forward[name].add(target)
-        for threat in hero.get('suppressedHeroes', {}).keys():
-            backward[name].add(threat)
-
-    # 构建带权重的关系
-    # counters[A][B] = weight, means A counters B with confidence weight
-    counters = defaultdict(dict)
-    countered_by = defaultdict(dict)
-
-    all_heroes = set(main.keys())
-    for a in all_heroes:
-        for b in all_heroes:
-            if a == b:
-                continue
-            # a counters b?
-            a_says_counter = b in forward[a]        # A's page says A beats B
-            b_says_countered = a in backward[b]     # B's page says A beats B
-            if a_says_counter and b_says_countered:
-                counters[a][b] = 3  # 双向确认
-                countered_by[b][a] = 3
-            elif a_says_counter or b_says_countered:
-                w = 2  # 单向官方
-                if b not in counters[a]:
-                    counters[a][b] = w
-                if a not in countered_by[b]:
-                    countered_by[b][a] = w
-
-    return counters, countered_by
+HEADERS = {
+    "Content-Type": "application/json",
+    "cchannelid": "2002",
+    "cclientversioncode": "2037905606",
+    "cclientversionname": "8.101.1017",
+    "ccurrentgameid": "20001",
+    "cgameid": "20001",
+    "csystem": "android",
+    "csystemversioncode": "32",
+    "gameareaid": "1",
+    "gameid": "20001",
+    "gameopenid": "54533036A3D6E4241440CBCD66694578",
+    "gameroleid": "2157931910",
+    "gameserverid": "1312",
+    "noencrypt": "1",
+    "openid": "472AD0DD361C8EC026E52F445041F843",
+    "userid": "2118558336",
+}
 
 
-def get_hero_types(heroes_json):
-    """返回 {英雄名: 定位} 和 {定位: [英雄名列表]}."""
-    hero_type = {}
-    type_heroes = defaultdict(list)
-    for h in heroes_json:
-        name = h['cname'].split('(')[0]
-        t = TYPE_MAP.get(h.get('hero_type', 0), '?')
-        hero_type[name] = t
-        type_heroes[t].append(name)
-    return hero_type, type_heroes
+def get_token() -> str:
+    req = urllib.request.Request(TOKEN_URL, headers={"User-Agent": "wzry-cheatsheet/1.0"})
+    with urllib.request.urlopen(req, timeout=10) as resp:
+        data = json.loads(resp.read().decode('utf-8'))
+    return data.get('token', '')
 
 
-def fill_by_type(counters, countered_by, hero_type, type_heroes, min_count=3):
-    """对于不够 min_count 的英雄, 用同定位的高频克制对象补全 (权重=1)."""
-    all_heroes = set(counters.keys()) | set(countered_by.keys())
-
-    for name in list(all_heroes):
-        if len(counters[name]) >= min_count:
-            continue
-        t = hero_type.get(name, '?')
-        freq = defaultdict(int)
-        for peer in type_heroes.get(t, []):
-            if peer == name:
-                continue
-            for target in counters[peer]:
-                if target != name and target not in counters[name]:
-                    freq[target] += 1
-        for target, _ in sorted(freq.items(), key=lambda x: -x[1]):
-            if len(counters[name]) >= min_count:
-                break
-            counters[name][target] = 1
-            if name not in countered_by[target]:
-                countered_by[target][name] = 1
-
-    for name in list(all_heroes):
-        if len(countered_by[name]) >= min_count:
-            continue
-        t = hero_type.get(name, '?')
-        freq = defaultdict(int)
-        for peer in type_heroes.get(t, []):
-            if peer == name:
-                continue
-            for threat in countered_by[peer]:
-                if threat != name and threat not in countered_by[name]:
-                    freq[threat] += 1
-        for threat, _ in sorted(freq.items(), key=lambda x: -x[1]):
-            if len(countered_by[name]) >= min_count:
-                break
-            countered_by[name][threat] = 1
-            if name not in counters[threat]:
-                counters[threat][name] = 1
+def fetch_hero_counter(hero_id: int, token: str) -> dict:
+    headers = {**HEADERS, "token": token}
+    body = json.dumps({"heroId": hero_id}).encode('utf-8')
+    req = urllib.request.Request(API_URL, data=body, headers=headers, method='POST')
+    with urllib.request.urlopen(req, timeout=10) as resp:
+        return json.loads(resp.read().decode('utf-8'))
 
 
 def main():
-    raw = fetch()
-    api_main = raw['main']
-    print(f'got {len(api_main)} heroes from API')
+    print('fetching token ...')
+    token = get_token()
+    print(f'token: {token}')
 
-    with open(DATA / 'heroes.json', 'r', encoding='utf-8') as f:
-        heroes_json = json.load(f)
+    print('fetching hero list ...')
+    with urllib.request.urlopen(HERO_LIST_URL, timeout=10) as resp:
+        heroes = json.loads(resp.read().decode('utf-8'))
+    print(f'heroes: {len(heroes)}')
 
-    hero_type, type_heroes = get_hero_types(heroes_json)
-    counters, countered_by = build_counter_graph(api_main, heroes_json)
+    results = {}
+    errors = []
+    for i, h in enumerate(heroes):
+        hero_id = h['ename']
+        hero_name = h['cname']
+        try:
+            resp = fetch_hero_counter(hero_id, token)
+            if resp.get('returnCode') == 0:
+                info = resp['data']
+                kz_list = info.get('kzInfo', {}).get('list', [])
+                bkz_list = info.get('bkzInfo', {}).get('list', [])
+                results[hero_name] = {
+                    'counter': [[x['szTitle'], round(x['kzParam'] * 100, 1)] for x in kz_list],
+                    'countered_by': [[x['szTitle'], round(x['bkzParam'] * 100, 1)] for x in bkz_list],
+                    'update_time': info.get('kzInfo', {}).get('updateTime', ''),
+                }
+            else:
+                errors.append((hero_name, resp.get('returnMsg', '')))
+        except Exception as e:
+            errors.append((hero_name, str(e)))
 
-    # 补全
-    fill_by_type(counters, countered_by, hero_type, type_heroes, min_count=3)
+        if (i + 1) % 20 == 0:
+            print(f'  progress: {i+1}/{len(heroes)}')
+        time.sleep(0.1)
 
-    # 统计
-    both3 = sum(1 for name in api_main if len(counters.get(name, {})) >= 3 and len(countered_by.get(name, {})) >= 3)
-    print(f'两边都>=3 的英雄: {both3}/{len(api_main)}')
-
-    # 输出: [[name, weight], ...] 按权重降序排列
-    result = {}
-    for name in api_main:
-        c = counters.get(name, {})
-        cb = countered_by.get(name, {})
-        result[name] = {
-            'counter': [[n, w] for n, w in sorted(c.items(), key=lambda x: -x[1])],
-            'countered_by': [[n, w] for n, w in sorted(cb.items(), key=lambda x: -x[1])],
-        }
+    print(f'\nsuccess: {len(results)}, errors: {len(errors)}')
+    if errors:
+        print(f'errors: {errors[:5]}')
 
     out = DATA / 'counters.json'
     with open(out, 'w', encoding='utf-8') as f:
-        json.dump(result, f, ensure_ascii=False, indent=2)
+        json.dump(results, f, ensure_ascii=False, indent=2)
     print(f'wrote: {out}')
 
 

@@ -45,7 +45,8 @@ FONT_BOLD = '/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc'
 
 MAX_DISPLAY = 5  # 每边最多显示 5 个英雄名
 
-SUPERSCRIPT = {3: '³', 2: '²', 1: '¹'}  # ³ ² ¹
+SUPERSCRIPT_DIGIT = {0: '⁰', 1: '¹', 2: '²', 3: '³', 4: '⁴',
+                     5: '⁵', 6: '⁶', 7: '⁷', 8: '⁸', 9: '⁹'}
 
 
 def font(bold: bool, size: int) -> ImageFont.FreeTypeFont:
@@ -133,7 +134,7 @@ def render():
     y += 42
 
     # 副标题 + 数据来源
-    sub_text = f'共 {len(uniq)} 英雄 · 数据来自 pvp.qq.com 官方 (实时) · 反向推导扩展'
+    sub_text = f'共 {len(uniq)} 英雄 · 数据来自王者营地国服 (真实对局统计)'
     d.text((PAD_X, y), sub_text, font=f_sub, fill=SUB)
     y += 26
 
@@ -149,9 +150,9 @@ def render():
         leg_x += chip_w + 4
     y += 26
 
-    # 系数说明 (一行)
+    # 评分说明 (一行)
     f_note = font(False, 17)
-    note = '角标: ³=双向确认(最强)  ²=单向官方  ¹=同类推断'
+    note = '角标 = 克制率% (对该英雄的胜率优势, 越高克制越明显)  更新: 2026-05'
     d.text((PAD_X, y), note, font=f_note, fill=SUB)
     y += 24
 
@@ -195,18 +196,19 @@ def render():
             def draw_list_with_sup(draw, items, x, y_pos, label, label_color):
                 draw.text((x, y_pos), label, font=f_label, fill=label_color)
                 cx = x + 26
-                f_sup = font(False, 14)
+                f_sup = font(False, 12)
                 for i, (n, w) in enumerate(items):
                     if i > 0:
-                        draw.text((cx, y_pos), '·', font=f_data, fill=SUB)
-                        cx += draw.textbbox((0, 0), '·', font=f_data)[2] + 1
+                        draw.text((cx, y_pos), ' ', font=f_data, fill=SUB)
+                        cx += 6
                     draw.text((cx, y_pos), n, font=f_data, fill=FG)
                     nw2 = draw.textbbox((0, 0), n, font=f_data)[2]
                     cx += nw2
-                    sup = SUPERSCRIPT.get(w, '')
-                    if sup:
-                        draw.text((cx, y_pos - 4), sup, font=f_sup, fill=SUB)
-                        cx += draw.textbbox((0, 0), sup, font=f_sup)[2] + 1
+                    if w:
+                        # 画评分角标 (普通数字, 小字号, 偏上)
+                        sup_text = str(round(w, 1))
+                        draw.text((cx + 1, y_pos - 6), sup_text, font=f_sup, fill=SUB)
+                        cx += draw.textbbox((0, 0), sup_text, font=f_sup)[2] + 3
                     cx += 2
                 return cx
 
