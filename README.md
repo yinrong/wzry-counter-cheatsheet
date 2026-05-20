@@ -1,7 +1,8 @@
 # 王者荣耀 全英雄克制速查 / Honor of Kings Hero Counter Cheatsheet
 
 > 单页手机版 PNG / HTML，覆盖全部 130+ 英雄的克制 (counter) 与被克制 (countered by) 关系。
-> 数据用 JSON 维护，渲染用纯 Python (Pillow)，每次提交自动重建图片。
+> **数据来自 pvp.qq.com 官方接口 (实时拉取)**，通过反向推导扩展到每英雄 ≥3 克制 + ≥3 被克制。
+> 每周一自动刷新数据，GitHub Actions 重建图片。
 
 **关键词 / Keywords:** 王者荣耀 · 王者营地 · 克制 · 反制 · cheatsheet · 速查 · honor of kings · arena of valor · hero counter · matchup · wzry · 英雄克制表
 
@@ -32,8 +33,9 @@ HTML 版: [`output/cheatsheet_mobile.html`](output/cheatsheet_mobile.html)
 .
 ├── data/
 │   ├── heroes.json       # 官方英雄列表 (来自 pvp.qq.com)
-│   └── counters.json     # 克制关系数据 (人工维护, 见下方贡献流程)
+│   └── counters.json     # 克制关系数据 (自动拉取 + 反向推导)
 ├── src/
+│   ├── fetch_data.py     # 从 pvp.qq.com 拉取实时克制数据
 │   ├── render_html.py    # 渲染手机版 HTML
 │   └── render_png.py     # 渲染手机版 PNG (Pillow, 无浏览器依赖)
 ├── output/
@@ -57,43 +59,50 @@ python src/render_png.py
 
 ---
 
-## 贡献 / Contributing data
+## 数据流 / Data pipeline
 
-克制数据是 `data/counters.json`，结构很简单：
-
-```json
-{
-  "鲁班七号": {
-    "counter": ["程咬金", "廉颇", "白起", "夏侯惇"],
-    "countered_by": ["李白", "韩信", "兰陵王", "阿轲"]
-  }
-}
+```
+pvp.qq.com 官方英雄详情页
+        │
+        ▼
+qing762.is-a.dev/api/wangzhe  (第三方公开 API, 实时爬取)
+        │
+        ▼
+src/fetch_data.py  ─── 拉取 130 英雄各 2 克制 + 2 被克制 (官方原始)
+        │               ├── 反向推导: A克B → B被A克
+        │               └── 同类补全: 同定位英雄高频克制对象
+        ▼
+data/counters.json  ─── 每英雄 ≥3 克制 + ≥3 被克制
+        │
+        ▼
+src/render_png.py + render_html.py → output/
 ```
 
-**改一个英雄的克制关系：** 直接编辑 `data/counters.json`，提交 PR/push 到 main，GitHub Actions 自动重新生成 PNG/HTML。
+每周一 GitHub Actions 自动跑一次全流程，也可手动 `workflow_dispatch`。
 
-**从哪里抓数据：**
-- 王者营地 APP → 数据 → 英雄 → 选英雄 → 克制 → 段位选「巅峰赛/顶端」
-- 接口需要登录态，目前没有公开 API
-- 抓包工具 (Reqable / HttpCanary / Stream) 可以一次性拉全量
-
-数据每个版本都会变，欢迎按版本号开 PR 更新。
+**手动刷新：**
+```bash
+python src/fetch_data.py   # 拉最新数据
+python src/render_png.py   # 重建 PNG
+python src/render_html.py  # 重建 HTML
+```
 
 ---
 
 ## 数据说明 / Data caveat
 
 - **英雄列表**: 来自 `https://pvp.qq.com/web201605/js/herolist.json`，实时官方数据
-- **克制关系**: 当前版本基于「通用克制框架 + 历史版本认知」整理，**不是**王者营地实时巅峰赛数据
-- 用于把握大方向，具体到分段差异 / 装备 / 阵容请以游戏内为准
+- **克制关系**: 来自 pvp.qq.com 官方英雄详情页（每英雄 2+2），通过反向推导 + 同定位补全扩展到 ≥3+3
+- 数据每周自动刷新，跟随官方更新
+- 不是王者营地 APP 里的「巅峰赛分段」数据（那个需要登录态），但来源一致（都是腾讯官方）
 
 ---
 
 ## 自动化 / Automation
 
 `.github/workflows/build.yml`：
-- `data/` 或 `src/` 变更 → 自动跑渲染
-- 输出图片 commit 回 `output/` 目录
+- `data/` 或 `src/` 变更 → 拉取最新数据 → 重建图片 → commit
+- **每周一 UTC 03:00 定时刷新**（跟随版本更新）
 - 也可手动触发 (`workflow_dispatch`)
 
 ---
