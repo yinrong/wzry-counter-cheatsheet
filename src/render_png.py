@@ -45,6 +45,8 @@ FONT_BOLD = '/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc'
 
 MAX_DISPLAY = 5  # 每边最多显示 5 个英雄名
 
+SUPERSCRIPT = {3: '³', 2: '²', 1: '¹'}  # ³ ² ¹
+
 
 def font(bold: bool, size: int) -> ImageFont.FreeTypeFont:
     path = FONT_BOLD if bold else FONT_REG
@@ -78,16 +80,22 @@ def load_data():
         groups[h['initial']].append(h)
 
     # 合并元流之子多形态的克制数据
-    merged_counter = set()
-    merged_by = set()
+    merged_counter = {}
+    merged_by = {}
     for k, v in counters.items():
         if '元流之子' in k:
-            merged_counter.update(v['counter'])
-            merged_by.update(v['countered_by'])
+            for item in v.get('counter', []):
+                name_w = item if isinstance(item, list) else [item, 2]
+                n, w = name_w[0], name_w[1]
+                merged_counter[n] = max(merged_counter.get(n, 0), w)
+            for item in v.get('countered_by', []):
+                name_w = item if isinstance(item, list) else [item, 2]
+                n, w = name_w[0], name_w[1]
+                merged_by[n] = max(merged_by.get(n, 0), w)
     if merged_counter:
         counters['元流之子'] = {
-            'counter': sorted(merged_counter),
-            'countered_by': sorted(merged_by),
+            'counter': [[n, w] for n, w in sorted(merged_counter.items(), key=lambda x: -x[1])],
+            'countered_by': [[n, w] for n, w in sorted(merged_by.items(), key=lambda x: -x[1])],
         }
 
     return uniq, dict(sorted(groups.items())), counters
@@ -106,7 +114,7 @@ def render():
 
     ROW_H = 44      # 每英雄行高
     GRP_H = 36      # 分组标题行高
-    HEADER_H = 120  # 头部 (标题+副标题+图例)
+    HEADER_H = 146  # 头部 (标题+副标题+图例+系数说明)
 
     # 计算总高度
     total_h = HEADER_H
@@ -129,7 +137,7 @@ def render():
     d.text((PAD_X, y), sub_text, font=f_sub, fill=SUB)
     y += 26
 
-    # 图例 (一行)
+    # 图例 (一行): 定位色块
     leg_x = PAD_X
     f_leg = font(True, 18)
     for tn, color in TYPE_COLOR.items():
@@ -139,7 +147,13 @@ def render():
         d.rectangle([leg_x, y, leg_x + chip_w, y + 22], fill=color)
         d.text((leg_x + 6, y + 1), tn, font=f_leg, fill=(255, 255, 255))
         leg_x += chip_w + 4
-    y += 30
+    y += 26
+
+    # 系数说明 (一行)
+    f_note = font(False, 17)
+    note = '角标: ³=双向确认(最强)  ²=单向官方  ¹=同类推断'
+    d.text((PAD_X, y), note, font=f_note, fill=SUB)
+    y += 24
 
     # 各分组
     for letter, items in groups.items():
@@ -155,9 +169,15 @@ def render():
             type_cn = hero['type_cn']
             color = TYPE_COLOR.get(type_cn, (80, 80, 80))
 
-            data = counters.get(name, {'counter': ['—'], 'countered_by': ['—']})
+            data = counters.get(name, {'counter': [['—', 0]], 'countered_by': [['—', 0]]})
             counter_list = data['counter'][:MAX_DISPLAY]
             by_list = data['countered_by'][:MAX_DISPLAY]
+
+            # 兼容旧格式 (纯字符串列表)
+            def normalize(lst):
+                return [[x, 2] if isinstance(x, str) else x for x in lst]
+            counter_list = normalize(counter_list)
+            by_list = normalize(by_list)
 
             # 名字色块
             bbox = d.textbbox((0, 0), name, font=f_name)
@@ -168,18 +188,32 @@ def render():
             d.rectangle([PAD_X, cy, PAD_X + chip_w, cy + chip_h], fill=color)
             d.text((PAD_X + 7, cy + 2), name, font=f_name, fill=(255, 255, 255))
 
-            # 克/怕 数据 (同一行)
+            # 克/怕 数据 (同一行, 用角标)
             data_x = PAD_X + chip_w + 10
             data_y = y + (ROW_H - 24) // 2
 
-            # "克"
-            d.text((data_x, data_y), '克', font=f_label, fill=GREEN)
-            d.text((data_x + 26, data_y), '·'.join(counter_list), font=f_data, fill=FG)
+            def draw_list_with_sup(draw, items, x, y_pos, label, label_color):
+                draw.text((x, y_pos), label, font=f_label, fill=label_color)
+                cx = x + 26
+                f_sup = font(False, 14)
+                for i, (n, w) in enumerate(items):
+                    if i > 0:
+                        draw.text((cx, y_pos), '·', font=f_data, fill=SUB)
+                        cx += draw.textbbox((0, 0), '·', font=f_data)[2] + 1
+                    draw.text((cx, y_pos), n, font=f_data, fill=FG)
+                    nw2 = draw.textbbox((0, 0), n, font=f_data)[2]
+                    cx += nw2
+                    sup = SUPERSCRIPT.get(w, '')
+                    if sup:
+                        draw.text((cx, y_pos - 4), sup, font=f_sup, fill=SUB)
+                        cx += draw.textbbox((0, 0), sup, font=f_sup)[2] + 1
+                    cx += 2
+                return cx
 
-            # "怕" 放在行的右半部分
-            mid_x = W // 2 + 20
-            d.text((mid_x, data_y), '怕', font=f_label, fill=RED)
-            d.text((mid_x + 26, data_y), '·'.join(by_list), font=f_data, fill=FG)
+            draw_list_with_sup(d, counter_list, data_x, data_y, '克', GREEN)
+
+            mid_x = W // 2 + 40
+            draw_list_with_sup(d, by_list, mid_x, data_y, '怕', RED)
 
             # 分隔线
             d.line([PAD_X, y + ROW_H - 1, W - PAD_X, y + ROW_H - 1], fill=LINE_COLOR, width=1)

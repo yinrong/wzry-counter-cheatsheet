@@ -100,6 +100,8 @@ def main():
   .kv { display: block; margin-top: 4px; font-size: 14px; }
   .k-strong { color: var(--green); font-weight: bold; margin-right: 8px; }
   .k-weak { color: var(--red); font-weight: bold; margin-right: 8px; }
+  sup { font-size: 10px; color: #999; vertical-align: super; margin-left: 1px; }
+  .note { font-size: 12px; color: #888; margin: 0 0 14px; }
   footer {
     margin-top: 28px; padding-top: 12px; border-top: 1px solid var(--line);
     font-size: 11px; color: #888; text-align: center;
@@ -121,18 +123,32 @@ def main():
 ''')
     for tn, color in TYPE_COLOR.items():
         parts.append(f'  <span style="background:{color}">{tn}</span>\n')
-    parts.append('</div>\n<div class="toc">\n')
+    parts.append('</div>\n')
+    parts.append('<p class="note">角标: <sup>3</sup>=双向确认(最强) <sup>2</sup>=单向官方 <sup>1</sup>=同类推断</p>\n')
+    parts.append('<div class="toc">\n')
     for letter in groups:
         parts.append(f'  <a href="#g-{letter}">{letter}</a>\n')
     parts.append('</div>\n')
 
+    def fmt_list(items, max_show=5):
+        """Format [[name, weight], ...] or [name, ...] with <sup> tags."""
+        out = []
+        for item in items[:max_show]:
+            if isinstance(item, list):
+                n, w = item[0], item[1]
+                sup = f'<sup>{w}</sup>' if w else ''
+            else:
+                n, sup = item, ''
+            out.append(f'{n}{sup}')
+        return ' · '.join(out)
+
     for letter, items in groups.items():
         parts.append(f'<div class="group-title" id="g-{letter}">{letter}</div>\n')
         for h in items:
-            data = counters.get(h['cname'], {'counter': ['—'], 'countered_by': ['—']})
+            data = counters.get(h['cname'], {'counter': [['—', 0]], 'countered_by': [['—', 0]]})
             color = TYPE_COLOR[h['type_cn']]
-            counter_s = ' · '.join(data['counter'])
-            by_s = ' · '.join(data['countered_by'])
+            counter_s = fmt_list(data['counter'])
+            by_s = fmt_list(data['countered_by'])
             parts.append(
                 f'<div class="row">'
                 f'<span class="name" style="background:{color}">{h["cname"]}</span>'
