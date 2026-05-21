@@ -1,166 +1,141 @@
 #!/usr/bin/env python3
-"""
-渲染手机版克制速查 HTML.
-- 输入: data/heroes.json, data/counters.json
-- 输出: output/cheatsheet_mobile.html (单列竖版, viewport 适配手机)
-"""
+"""按位置分组的克制速查 HTML (手机版)."""
 import json
 from pathlib import Path
-from collections import defaultdict
-
-from pypinyin import lazy_pinyin
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / 'data'
 OUT = ROOT / 'output'
 OUT.mkdir(exist_ok=True)
 
-TYPE_MAP = {1: '战士', 2: '法师', 3: '坦克', 4: '刺客', 5: '射手', 6: '辅助'}
-TYPE_COLOR = {
-    '战士': '#c0392b',
-    '法师': '#8e44ad',
-    '坦克': '#16a085',
-    '刺客': '#d35400',
-    '射手': '#2980b9',
-    '辅助': '#7f8c8d',
-    '多形态': '#34495e',
+POS_INFO = {
+    1: ('对抗路', '#c0392b'),
+    2: ('中路',   '#8e44ad'),
+    3: ('发育路', '#2980b9'),
+    4: ('游走',   '#16a085'),
+    5: ('打野',   '#d35400'),
 }
+POS_ORDER = [1, 5, 2, 3, 4]
+
+T_COLOR = {'T0': '#e74c3c', 'T1': '#e67e22', 'T2': '#3498db', 'T3': '#7f8c8d'}
+
+
+def hero_main_position(hero_name, all_data):
+    info = all_data['counters'].get(hero_name, {})
+    tranks = info.get('tRanks', {})
+    if not tranks:
+        return 5
+    best = sorted(tranks.items(), key=lambda x: (
+        ['T0', 'T1', 'T2', 'T3'].index(x[1]) if x[1] in ['T0', 'T1', 'T2', 'T3'] else 99,
+        int(x[0]),
+    ))
+    return int(best[0][0])
 
 
 def main():
-    with open(DATA / 'heroes.json', 'r', encoding='utf-8') as f:
-        heroes = json.load(f)
     with open(DATA / 'counters.json', 'r', encoding='utf-8') as f:
-        counters = json.load(f)
-
-    seen = set()
-    uniq = []
-    for h in heroes:
-        base = h['cname'].split('(')[0]
-        if base in seen:
-            continue
-        seen.add(base)
-        h['cname'] = base
-        h['type_cn'] = '多形态' if base == '元流之子' else TYPE_MAP.get(h['hero_type'], '?')
-        h['py'] = ''.join(lazy_pinyin(base))
-        h['initial'] = h['py'][0].upper() if h['py'] else '#'
-        uniq.append(h)
-    uniq.sort(key=lambda x: (x['initial'], x['py']))
-
-    groups = defaultdict(list)
-    for h in uniq:
-        groups[h['initial']].append(h)
-    groups = dict(sorted(groups.items()))
+        data = json.load(f)
+    update_time = data.get('updateTime', '')
 
     parts = []
-    parts.append('''<!DOCTYPE html>
+    parts.append(f'''<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>王者荣耀 全英雄克制速查 (手机版)</title>
+<title>王者荣耀 对位克制速查 (顶端排位)</title>
 <style>
-  :root { --primary: #c0392b; --green: #27ae60; --red: #c0392b; --line: #e0e0e0; }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; padding: 0; }
-  body {
+  * {{ box-sizing: border-box; }}
+  html, body {{ margin: 0; padding: 0; }}
+  body {{
     font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-    font-size: 15px; line-height: 1.5;
-    color: #222; background: #fafafa;
-    padding: 14px 16px 80px;
-    max-width: 480px; margin: 0 auto;
-  }
-  header h1 { margin: 0 0 4px; font-size: 22px; color: var(--primary); }
-  header .meta { font-size: 12px; color: #666; }
-  .warn {
-    background: #fff8e1; border-left: 4px solid #f39c12;
-    padding: 10px 12px; margin: 14px 0; font-size: 13px; color: #555;
-    border-radius: 4px;
-  }
-  .warn b { color: #b87100; }
-  .legend { display: flex; flex-wrap: wrap; gap: 6px; margin: 10px 0 16px; }
-  .legend span { padding: 3px 10px; border-radius: 12px; color: #fff; font-size: 12px; }
-  .toc { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
-  .toc a {
-    text-decoration: none; color: var(--primary); border: 1px solid var(--primary);
-    padding: 4px 9px; border-radius: 4px; font-weight: bold; font-size: 13px;
-  }
-  .group-title {
-    font-size: 20px; font-weight: bold; color: var(--primary);
-    border-bottom: 2px solid var(--primary); margin: 18px 0 10px;
-    padding-bottom: 4px; scroll-margin-top: 8px;
-  }
-  .row { padding: 8px 0; border-bottom: 1px dotted var(--line); }
-  .row:last-child { border-bottom: none; }
-  .name {
-    display: inline-block; padding: 3px 10px; border-radius: 4px;
-    color: #fff; font-weight: bold; font-size: 16px; margin-right: 6px;
-  }
-  .type { font-size: 12px; color: #666; }
-  .kv { display: block; margin-top: 4px; font-size: 14px; }
-  .k-strong { color: var(--green); font-weight: bold; margin-right: 8px; }
-  .k-weak { color: var(--red); font-weight: bold; margin-right: 8px; }
-  sup { font-size: 10px; color: #999; vertical-align: super; margin-left: 1px; }
-  .note { font-size: 12px; color: #888; margin: 0 0 14px; }
-  footer {
-    margin-top: 28px; padding-top: 12px; border-top: 1px solid var(--line);
-    font-size: 11px; color: #888; text-align: center;
-  }
-  footer a { color: var(--primary); text-decoration: none; }
+    font-size: 14px; line-height: 1.4; color: #222; background: #fafafa;
+    padding: 12px 14px 60px; max-width: 600px; margin: 0 auto;
+  }}
+  h1 {{ margin: 0 0 4px; font-size: 20px; color: #c0392b; }}
+  .meta {{ font-size: 12px; color: #666; }}
+  .note {{ font-size: 12px; color: #888; margin: 8px 0; }}
+  .legend {{ display: flex; flex-wrap: wrap; gap: 4px; margin: 6px 0 14px; }}
+  .legend span {{ padding: 2px 8px; border-radius: 10px; color: #fff; font-size: 12px; }}
+  .pos-hdr {{
+    color: #fff; padding: 8px 12px; font-weight: bold; font-size: 17px;
+    border-radius: 4px 4px 0 0; margin-top: 18px;
+    display: flex; justify-content: space-between; align-items: baseline;
+  }}
+  .pos-hdr small {{ font-size: 12px; opacity: .85; font-weight: normal; }}
+  .row {{
+    display: flex; flex-wrap: wrap; align-items: center; gap: 6px;
+    padding: 7px 4px; border-bottom: 1px dotted #e0e0e0; font-size: 13px;
+  }}
+  .name {{
+    color: #fff; font-weight: bold; padding: 2px 8px; border-radius: 3px;
+    font-size: 14px; flex-shrink: 0;
+  }}
+  .trank {{ font-size: 11px; font-weight: bold; flex-shrink: 0; }}
+  .winrate {{ font-size: 11px; color: #888; flex-shrink: 0; }}
+  .k-strong {{ color: #27ae60; font-weight: bold; flex-shrink: 0; }}
+  .target {{ font-weight: 500; }}
+  sup {{ font-size: 9px; color: #888; vertical-align: super; margin-left: 1px; }}
 </style>
 </head>
 <body>
-<header>
-  <h1>王者荣耀 · 全英雄克制速查</h1>
-  <div class="meta">共 ''' + str(len(uniq)) + ''' 英雄 · 拼音 A-Z 分组 · 生成 2026-05-20</div>
-</header>
-<div class="warn">
-  <b>数据说明:</b> 英雄列表来自 pvp.qq.com 官方接口 (实时);
-  克制关系基于<b>通用克制框架 + 历史版本认知</b>整理, 仅供方向性参考,
-  非王者营地实时巅峰赛/顶端排位数据.
-</div>
+<h1>王者荣耀 · 对位克制速查 (顶端排位)</h1>
+<div class="meta">国服 · 王者营地真实对局统计 · 更新 {update_time}</div>
+<div class="note">角标 = 克制率% (对该英雄的胜率优势) · 颜色 = 对方位置 (同色 = 同位置对手, 用户最常用对位)</div>
 <div class="legend">
 ''')
-    for tn, color in TYPE_COLOR.items():
-        parts.append(f'  <span style="background:{color}">{tn}</span>\n')
-    parts.append('</div>\n')
-    parts.append('<p class="note">角标: <sup>3</sup>=双向确认(最强) <sup>2</sup>=单向官方 <sup>1</sup>=同类推断</p>\n')
-    parts.append('<div class="toc">\n')
-    for letter in groups:
-        parts.append(f'  <a href="#g-{letter}">{letter}</a>\n')
+    for pos in POS_ORDER:
+        name, color = POS_INFO[pos]
+        parts.append(f'  <span style="background:{color}">{name}</span>\n')
     parts.append('</div>\n')
 
-    def fmt_list(items, max_show=5):
-        """Format [[name, weight], ...] or [name, ...] with <sup> tags."""
-        out = []
-        for item in items[:max_show]:
-            if isinstance(item, list):
-                n, w = item[0], item[1]
-                sup = f'<sup>{w}</sup>' if w else ''
-            else:
-                n, sup = item, ''
-            out.append(f'{n}{sup}')
-        return ' · '.join(out)
+    for pos in POS_ORDER:
+        pos_str = str(pos)
+        if pos_str not in data['positions']:
+            continue
+        info = data['positions'][pos_str]
+        name, color = POS_INFO[pos]
+        heroes = info['heroes']
+        parts.append(
+            f'<div class="pos-hdr" style="background:{color}">'
+            f'<span>{name}</span><small>{len(heroes)} 英雄 · 按胜率排名</small>'
+            f'</div>\n'
+        )
+        for h in heroes:
+            t_rank = h.get('tRank', '')
+            wr = h.get('winRate', 0)
+            cdata = data['counters'].get(h['name'], {})
+            cs = cdata.get('counter', [])
+            t_html = (
+                f'<span class="trank" style="color:{T_COLOR.get(t_rank,"#888")}">{t_rank}</span>'
+                if t_rank else ''
+            )
+            wr_html = f'<span class="winrate">{wr}%</span>' if wr else ''
 
-    for letter, items in groups.items():
-        parts.append(f'<div class="group-title" id="g-{letter}">{letter}</div>\n')
-        for h in items:
-            data = counters.get(h['cname'], {'counter': [['—', 0]], 'countered_by': [['—', 0]]})
-            color = TYPE_COLOR[h['type_cn']]
-            counter_s = fmt_list(data['counter'])
-            by_s = fmt_list(data['countered_by'])
+            target_html = []
+            for item in cs[:6]:
+                if isinstance(item, list):
+                    tn, rate = item[0], item[1]
+                else:
+                    tn, rate = item, 0
+                tpos = hero_main_position(tn, data)
+                tcolor = POS_INFO.get(tpos, (None, '#888'))[1]
+                rate_html = f'<sup>{rate}</sup>' if rate else ''
+                target_html.append(
+                    f'<span class="target" style="color:{tcolor}">{tn}{rate_html}</span>'
+                )
             parts.append(
                 f'<div class="row">'
-                f'<span class="name" style="background:{color}">{h["cname"]}</span>'
-                f'<span class="type">{h["type_cn"]}</span>'
-                f'<span class="kv"><span class="k-strong">克</span>{counter_s}</span>'
-                f'<span class="kv"><span class="k-weak">怕</span>{by_s}</span>'
+                f'<span class="name" style="background:{color}">{h["name"]}</span>'
+                f'{t_html}{wr_html}'
+                f'<span class="k-strong">克</span>'
+                f'{" · ".join(target_html)}'
                 f'</div>\n'
             )
 
-    parts.append('''<footer>
-  克 = 你强 (你打他容易) &nbsp;|&nbsp; 怕 = 你弱 (他打你容易)<br>
-  <a href="https://github.com/yinrong/wzry-counter-cheatsheet">github.com/yinrong/wzry-counter-cheatsheet</a>
+    parts.append(f'''<footer style="margin-top:24px; padding-top:10px; border-top:1px solid #ddd; font-size:11px; color:#888; text-align:center;">
+  克 = 你强 (你打他容易) &nbsp;|&nbsp; 角标 = 克制率%<br>
+  <a href="https://github.com/yinrong/wzry-counter-cheatsheet" style="color:#c0392b">github.com/yinrong/wzry-counter-cheatsheet</a>
 </footer>
 </body>
 </html>

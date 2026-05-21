@@ -1,7 +1,16 @@
 #!/usr/bin/env python3
 """
-渲染手机版克制速查 PNG — 紧凑单行排版.
-每英雄占一行: [色块名] 克:A·B·C  怕:X·Y·Z
+渲染按位置分组的克制 cheat sheet PNG.
+
+布局:
+  顶部: 标题 + 数据来源
+  5 个位置 section (对抗路/打野/中路/发育路/游走)
+  每 section 内:
+    位置头部 (色块 + 位置名 + 该位置英雄数)
+    每英雄一行: [英雄色块] [T级] 克 对象1·对象2·对象3 (角标=克制率%)
+  克制对象按对方位置颜色编码 (同位置同色, 用户最常用对位)
+
+颜色编码: 5 位置各一色
 """
 import json
 import os
@@ -9,44 +18,43 @@ from pathlib import Path
 from collections import defaultdict
 
 from PIL import Image, ImageDraw, ImageFont
-from pypinyin import lazy_pinyin
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / 'data'
 OUT = ROOT / 'output'
 OUT.mkdir(exist_ok=True)
 
-TYPE_MAP = {1: '战士', 2: '法师', 3: '坦克', 4: '刺客', 5: '射手', 6: '辅助'}
-TYPE_COLOR = {
-    '战士': (192, 57, 43),
-    '法师': (142, 68, 173),
-    '坦克': (22, 160, 133),
-    '刺客': (211, 84, 0),
-    '射手': (41, 128, 185),
-    '辅助': (127, 140, 141),
-    '多形态': (52, 73, 94),
+# 5 位置颜色 (饱和度高, 区分明显)
+POS_COLOR = {
+    1: ('对抗路', (192, 57, 43)),    # 红
+    5: ('打野',   (211, 84, 0)),     # 橙
+    2: ('中路',   (142, 68, 173)),   # 紫
+    3: ('发育路', (41, 128, 185)),   # 蓝
+    4: ('游走',   (22, 160, 133)),   # 青绿
+}
+POS_ORDER = [1, 5, 2, 3, 4]  # 显示顺序: 对抗→打野→中→发育→游走
+
+# T 级颜色
+TRANK_COLOR = {
+    'T0': (231, 76, 60),
+    'T1': (230, 126, 34),
+    'T2': (52, 152, 219),
+    'T3': (127, 140, 141),
 }
 
 BG = (255, 255, 255)
 FG = (34, 34, 34)
 SUB = (110, 110, 110)
-GRP_COLOR = (192, 57, 43)
+TITLE_COLOR = (192, 57, 43)
 LINE_COLOR = (235, 235, 235)
 GREEN = (39, 174, 96)
-RED = (192, 57, 43)
-WARN_BG = (255, 248, 225)
 
-W = 1080  # 更宽以适配单行内容
+W = 1080
 PAD_X = 20
 PAD_Y = 20
 
 FONT_REG = '/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc'
 FONT_BOLD = '/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc'
-
-MAX_DISPLAY = 5  # 每边最多显示 5 个英雄名
-
-SUPERSCRIPT_DIGIT = {0: '⁰', 1: '¹', 2: '²', 3: '³', 4: '⁴',
-                     5: '⁵', 6: '⁶', 7: '⁷', 8: '⁸', 9: '⁹'}
 
 
 def font(bold: bool, size: int) -> ImageFont.FreeTypeFont:
@@ -57,178 +65,177 @@ def font(bold: bool, size: int) -> ImageFont.FreeTypeFont:
 
 
 def load_data():
-    with open(DATA / 'heroes.json', 'r', encoding='utf-8') as f:
-        heroes = json.load(f)
     with open(DATA / 'counters.json', 'r', encoding='utf-8') as f:
-        counters = json.load(f)
+        return json.load(f)
 
-    seen = set()
-    uniq = []
-    for h in heroes:
-        base = h['cname'].split('(')[0]
-        if base in seen:
-            continue
-        seen.add(base)
-        h['cname'] = base
-        h['type_cn'] = '多形态' if base == '元流之子' else TYPE_MAP.get(h['hero_type'], '?')
-        h['py'] = ''.join(lazy_pinyin(base))
-        h['initial'] = h['py'][0].upper() if h['py'] else '#'
-        uniq.append(h)
-    uniq.sort(key=lambda x: (x['initial'], x['py']))
 
-    groups = defaultdict(list)
-    for h in uniq:
-        groups[h['initial']].append(h)
+def hero_main_position(hero_name: str, all_data: dict) -> int:
+    """找英雄的主位置: T 级最高的, 同 T 级取胜率最高."""
+    info = all_data['counters'].get(hero_name, {})
+    tranks = info.get('tRanks', {})
+    if not tranks:
+        return None
+    best = sorted(tranks.items(), key=lambda x: (
+        ['T0', 'T1', 'T2', 'T3'].index(x[1]) if x[1] in ['T0', 'T1', 'T2', 'T3'] else 99,
+        int(x[0]),
+    ))
+    return int(best[0][0])
 
-    # 合并元流之子多形态的克制数据
-    merged_counter = {}
-    merged_by = {}
-    for k, v in counters.items():
-        if '元流之子' in k:
-            for item in v.get('counter', []):
-                name_w = item if isinstance(item, list) else [item, 2]
-                n, w = name_w[0], name_w[1]
-                merged_counter[n] = max(merged_counter.get(n, 0), w)
-            for item in v.get('countered_by', []):
-                name_w = item if isinstance(item, list) else [item, 2]
-                n, w = name_w[0], name_w[1]
-                merged_by[n] = max(merged_by.get(n, 0), w)
-    if merged_counter:
-        counters['元流之子'] = {
-            'counter': [[n, w] for n, w in sorted(merged_counter.items(), key=lambda x: -x[1])],
-            'countered_by': [[n, w] for n, w in sorted(merged_by.items(), key=lambda x: -x[1])],
-        }
 
-    return uniq, dict(sorted(groups.items())), counters
+def get_target_position(target_name: str, all_data: dict) -> int:
+    """目标英雄主位置."""
+    p = hero_main_position(target_name, all_data)
+    return p if p else 5  # 默认打野色
 
 
 def render():
-    uniq, groups, counters = load_data()
+    data = load_data()
+    positions = data['positions']
+    counters = data['counters']
+    update_time = data.get('updateTime', '')
 
-    f_title = font(True, 36)
+    # 字体
+    f_title = font(True, 38)
     f_sub = font(False, 20)
-    f_grp = font(True, 28)
+    f_pos_hdr = font(True, 28)
+    f_pos_count = font(False, 18)
     f_name = font(True, 22)
-    f_data = font(False, 20)
+    f_trank = font(True, 16)
     f_label = font(True, 20)
+    f_data = font(False, 20)
+    f_sup = font(True, 13)
     f_foot = font(False, 18)
 
-    ROW_H = 44      # 每英雄行高
-    GRP_H = 36      # 分组标题行高
-    HEADER_H = 146  # 头部 (标题+副标题+图例+系数说明)
+    ROW_H = 44
+    POS_HDR_H = 50
+    HEADER_H = 110
 
-    # 计算总高度
+    # 估算总高度
     total_h = HEADER_H
-    for letter, items in groups.items():
-        total_h += GRP_H
-        total_h += len(items) * ROW_H
-    total_h += 60  # footer
-    total_h += 20  # 底部间距
+    for pos_str, info in positions.items():
+        total_h += POS_HDR_H
+        total_h += len(info['heroes']) * ROW_H
+        total_h += 16  # section 间距
+    total_h += 80  # footer
 
-    img = Image.new('RGB', (W, total_h), BG)
+    canvas_h = max(int(total_h * 1.2), 8000)
+    img = Image.new('RGB', (W, canvas_h), BG)
     d = ImageDraw.Draw(img)
+
     y = PAD_Y
 
     # 标题
-    d.text((PAD_X, y), '王者荣耀 · 全英雄克制速查', font=f_title, fill=GRP_COLOR)
-    y += 42
+    d.text((PAD_X, y), '王者荣耀 · 对位克制速查 (顶端排位)', font=f_title, fill=TITLE_COLOR)
+    y += 44
 
-    # 副标题 + 数据来源
-    sub_text = f'共 {len(uniq)} 英雄 · 数据来自王者营地国服 (真实对局统计)'
-    d.text((PAD_X, y), sub_text, font=f_sub, fill=SUB)
+    # 副标题
+    sub = f'数据来自王者营地国服顶端段位真实对局统计 · 更新 {update_time}'
+    d.text((PAD_X, y), sub, font=f_sub, fill=SUB)
     y += 26
 
-    # 图例 (一行): 定位色块
+    # 说明 + 位置图例 (一行)
+    note = '角标 = 克制率%   颜色 = 对方位置 (相同颜色 = 同位置对手)'
+    d.text((PAD_X, y), note, font=f_sub, fill=SUB)
+    y += 28
+
+    # 位置图例
     leg_x = PAD_X
-    f_leg = font(True, 18)
-    for tn, color in TYPE_COLOR.items():
-        bbox = d.textbbox((0, 0), tn, font=f_leg)
+    for pos in POS_ORDER:
+        name, color = POS_COLOR[pos]
+        bbox = d.textbbox((0, 0), name, font=f_pos_count)
         tw = bbox[2] - bbox[0]
-        chip_w = tw + 12
-        d.rectangle([leg_x, y, leg_x + chip_w, y + 22], fill=color)
-        d.text((leg_x + 6, y + 1), tn, font=f_leg, fill=(255, 255, 255))
-        leg_x += chip_w + 4
-    y += 26
+        cw = tw + 14
+        d.rectangle([leg_x, y, leg_x + cw, y + 24], fill=color)
+        d.text((leg_x + 7, y + 2), name, font=f_pos_count, fill=(255, 255, 255))
+        leg_x += cw + 6
+    y += 36
 
-    # 评分说明 (一行)
-    f_note = font(False, 17)
-    note = '角标 = 克制率% (对该英雄的胜率优势, 越高克制越明显)  更新: 2026-05'
-    d.text((PAD_X, y), note, font=f_note, fill=SUB)
-    y += 24
+    # 各位置 section
+    for pos in POS_ORDER:
+        pos_str = str(pos)
+        if pos_str not in positions:
+            continue
+        info = positions[pos_str]
+        pos_name, pos_color = POS_COLOR[pos]
+        heroes = info['heroes']
 
-    # 各分组
-    for letter, items in groups.items():
-        # 分组标题
-        d.text((PAD_X, y + 4), letter, font=f_grp, fill=GRP_COLOR)
-        bbox = d.textbbox((0, 0), letter, font=f_grp)
-        lw = bbox[2] - bbox[0]
-        d.line([PAD_X + lw + 10, y + GRP_H // 2, W - PAD_X, y + GRP_H // 2], fill=GRP_COLOR, width=1)
-        y += GRP_H
+        # 位置头部 (大色条)
+        d.rectangle([PAD_X, y, W - PAD_X, y + POS_HDR_H], fill=pos_color)
+        d.text((PAD_X + 14, y + 10), pos_name, font=f_pos_hdr, fill=(255, 255, 255))
+        cnt_text = f'共 {len(heroes)} 英雄 · 按胜率排名'
+        d.text((PAD_X + 200, y + 18), cnt_text, font=f_pos_count, fill=(255, 255, 255, 200))
+        y += POS_HDR_H + 4
 
-        for hero in items:
-            name = hero['cname']
-            type_cn = hero['type_cn']
-            color = TYPE_COLOR.get(type_cn, (80, 80, 80))
+        # 每英雄一行
+        for hero in heroes:
+            name = hero['name']
+            t_rank = hero.get('tRank', '')
+            cdata = counters.get(name, {})
+            cs = cdata.get('counter', [])
 
-            data = counters.get(name, {'counter': [['—', 0]], 'countered_by': [['—', 0]]})
-            counter_list = data['counter'][:MAX_DISPLAY]
-            by_list = data['countered_by'][:MAX_DISPLAY]
-
-            # 兼容旧格式 (纯字符串列表)
-            def normalize(lst):
-                return [[x, 2] if isinstance(x, str) else x for x in lst]
-            counter_list = normalize(counter_list)
-            by_list = normalize(by_list)
-
-            # 名字色块
+            # 英雄名色块 (用主位置色)
             bbox = d.textbbox((0, 0), name, font=f_name)
             nw = bbox[2] - bbox[0]
-            chip_w = nw + 14
-            chip_h = 28
+            chip_w = nw + 16
+            chip_h = 30
             cy = y + (ROW_H - chip_h) // 2
-            d.rectangle([PAD_X, cy, PAD_X + chip_w, cy + chip_h], fill=color)
-            d.text((PAD_X + 7, cy + 2), name, font=f_name, fill=(255, 255, 255))
+            d.rectangle([PAD_X, cy, PAD_X + chip_w, cy + chip_h], fill=pos_color)
+            d.text((PAD_X + 8, cy + 3), name, font=f_name, fill=(255, 255, 255))
 
-            # 克/怕 数据 (同一行, 用角标)
-            data_x = PAD_X + chip_w + 10
+            # T 级标签
+            tx = PAD_X + chip_w + 6
+            if t_rank:
+                t_color = TRANK_COLOR.get(t_rank, (130, 130, 130))
+                d.text((tx, cy + 7), t_rank, font=f_trank, fill=t_color)
+                tx += 30
+
+            # 胜率
+            wr = hero.get('winRate', 0)
+            if wr:
+                d.text((tx, cy + 8), f'{wr}%', font=f_pos_count, fill=SUB)
+                tx += 56
+
+            # "克"标签
+            data_x = tx + 4
             data_y = y + (ROW_H - 24) // 2
+            d.text((data_x, data_y), '克', font=f_label, fill=GREEN)
+            cx = data_x + 26
 
-            def draw_list_with_sup(draw, items, x, y_pos, label, label_color):
-                draw.text((x, y_pos), label, font=f_label, fill=label_color)
-                cx = x + 26
-                f_sup = font(False, 12)
-                for i, (n, w) in enumerate(items):
-                    if i > 0:
-                        draw.text((cx, y_pos), ' ', font=f_data, fill=SUB)
-                        cx += 6
-                    draw.text((cx, y_pos), n, font=f_data, fill=FG)
-                    nw2 = draw.textbbox((0, 0), n, font=f_data)[2]
-                    cx += nw2
-                    if w:
-                        # 画评分角标 (普通数字, 小字号, 偏上)
-                        sup_text = str(round(w, 1))
-                        draw.text((cx + 1, y_pos - 6), sup_text, font=f_sup, fill=SUB)
-                        cx += draw.textbbox((0, 0), sup_text, font=f_sup)[2] + 3
-                    cx += 2
-                return cx
+            # 克制对象 (按对方位置上色)
+            for i, item in enumerate(cs[:6]):  # 最多 6 个
+                target_name, rate = item if isinstance(item, list) else (item, 0)
+                target_pos = get_target_position(target_name, data)
+                target_color = POS_COLOR.get(target_pos, (100, 100, 100))[1]
 
-            draw_list_with_sup(d, counter_list, data_x, data_y, '克', GREEN)
+                if i > 0:
+                    cx += 6  # 间距
 
-            mid_x = W // 2 + 40
-            draw_list_with_sup(d, by_list, mid_x, data_y, '怕', RED)
+                # 目标英雄名 (用对方位置色)
+                d.text((cx, data_y), target_name, font=f_data, fill=target_color)
+                tw = d.textbbox((0, 0), target_name, font=f_data)[2]
+                cx += tw
 
-            # 分隔线
+                # 角标 (克制率)
+                if rate:
+                    sup = str(rate)
+                    d.text((cx + 1, data_y - 6), sup, font=f_sup, fill=SUB)
+                    cx += d.textbbox((0, 0), sup, font=f_sup)[2] + 3
+
+            # 行分隔线
             d.line([PAD_X, y + ROW_H - 1, W - PAD_X, y + ROW_H - 1], fill=LINE_COLOR, width=1)
             y += ROW_H
 
+        y += 16  # section 间距
+
     # footer
-    y += 10
-    d.text((PAD_X, y), '克 = 你强 (你打他容易)  |  怕 = 你弱 (他打你容易)', font=f_foot, fill=SUB)
+    y += 8
+    d.text((PAD_X, y), '克 = 你强 (你打他容易)  |  克制率% = 对该英雄的胜率优势', font=f_foot, fill=SUB)
     y += 22
     d.text((PAD_X, y), 'github.com/yinrong/wzry-counter-cheatsheet', font=f_foot, fill=SUB)
     y += 30
 
-    img = img.crop((0, 0, W, y))
+    crop_h = min(y, img.height)
+    img = img.crop((0, 0, W, crop_h))
     out = OUT / 'cheatsheet_mobile.png'
     img.save(out, optimize=True)
     print(f'wrote: {out}  size: {img.size}  bytes: {os.path.getsize(out)}')
