@@ -1,5 +1,5 @@
 {
-  "updateTime": "2026-06-15",
+  "updateTime": "2026-06-22",
   "positions": {
     "1": {
       "name": "对抗路",
@@ -8,17 +8,17 @@
           "name": "哪吒",
           "heroId": 180,
           "tRank": "T0",
-          "winRate": 54.2,
-          "showRate": 16.1,
-          "banRate": 64.9
+          "winRate": 54.5,
+          "showRate": 15.9,
+          "banRate": 65.3
         },
         {
           "name": "吕布",
           "heroId": 123,
           "tRank": "T0",
           "winRate": 46.6,
-          "showRate": 21.9,
-          "banRate": 6.5
+          "showRate": 20.5,
+          "banRate": 6.1
         },
         {
           "name": "项羽",
@@ -32,208 +32,208 @@
           "name": "廉颇",
           "heroId": 105,
           "tRank": "T1",
-          "winRate": 50.4,
-          "showRate": 15.5,
-          "banRate": 5.5
+          "winRate": 50.2,
+          "showRate": 14.7,
+          "banRate": 5.8
         },
         {
           "name": "蚩奼",
           "heroId": 172,
-          "tRank": "T1",
-          "winRate": 51.3,
-          "showRate": 12.9,
-          "banRate": 18.1
+          "tRank": "T2",
+          "winRate": 51.7,
+          "showRate": 12.2,
+          "banRate": 18.2
         },
         {
           "name": "李信",
           "heroId": 507,
           "tRank": "T2",
-          "winRate": 49.9,
-          "showRate": 11.0,
-          "banRate": 12.4
+          "winRate": 50.0,
+          "showRate": 10.9,
+          "banRate": 12.0
         },
         {
           "name": "芈月",
           "heroId": 121,
           "tRank": "T2",
-          "winRate": 53.3,
-          "showRate": 10.3,
-          "banRate": 18.0
+          "winRate": 53.0,
+          "showRate": 9.9,
+          "banRate": 17.7
         },
         {
           "name": "铠",
           "heroId": 193,
           "tRank": "T2",
-          "winRate": 51.6,
-          "showRate": 11.3,
-          "banRate": 5.9
+          "winRate": 51.4,
+          "showRate": 10.8,
+          "banRate": 5.6
         },
         {
           "name": "夏侯惇",
           "heroId": 126,
           "tRank": "T2",
           "winRate": 49.8,
-          "showRate": 10.3,
-          "banRate": 1.0
-        },
-        {
-          "name": "东皇太一",
-          "heroId": 187,
-          "tRank": "T2",
-          "winRate": 49.3,
-          "showRate": 7.3,
-          "banRate": 21.9
-        },
-        {
-          "name": "大司命",
-          "heroId": 517,
-          "tRank": "T2",
-          "winRate": 47.1,
-          "showRate": 8.9,
-          "banRate": 2.1
+          "showRate": 10.0,
+          "banRate": 1.1
         },
         {
           "name": "司空震",
           "heroId": 537,
           "tRank": "T2",
-          "winRate": 49.8,
-          "showRate": 8.8,
-          "banRate": 1.6
+          "winRate": 49.9,
+          "showRate": 9.8,
+          "banRate": 2.0
+        },
+        {
+          "name": "东皇太一",
+          "heroId": 187,
+          "tRank": "T2",
+          "winRate": 49.1,
+          "showRate": 7.3,
+          "banRate": 22.0
+        },
+        {
+          "name": "大司命",
+          "heroId": 517,
+          "tRank": "T2",
+          "winRate": 46.7,
+          "showRate": 8.5,
+          "banRate": 2.2
         },
         {
           "name": "亚瑟",
           "heroId": 166,
           "tRank": "T2",
-          "winRate": 48.4,
+          "winRate": 48.2,
           "showRate": 8.3,
-          "banRate": 0.2
+          "banRate": 0.3
         },
         {
           "name": "貂蝉",
           "heroId": 141,
           "tRank": "T2",
-          "winRate": 52.2,
-          "showRate": 8.1,
-          "banRate": 2.5
+          "winRate": 52.0,
+          "showRate": 7.8,
+          "banRate": 2.4
+        },
+        {
+          "name": "刘邦",
+          "heroId": 149,
+          "tRank": "T2",
+          "winRate": 51.1,
+          "showRate": 6.4,
+          "banRate": 13.6
+        },
+        {
+          "name": "关羽",
+          "heroId": 140,
+          "tRank": "T2",
+          "winRate": 50.0,
+          "showRate": 7.1,
+          "banRate": 3.7
         },
         {
           "name": "海诺",
           "heroId": 563,
           "tRank": "T2",
           "winRate": 48.2,
-          "showRate": 7.4,
-          "banRate": 6.2
-        },
-        {
-          "name": "刘邦",
-          "heroId": 149,
-          "tRank": "T2",
-          "winRate": 51.0,
-          "showRate": 6.7,
-          "banRate": 10.0
+          "showRate": 6.9,
+          "banRate": 6.1
         },
         {
           "name": "杨戬",
           "heroId": 178,
           "tRank": "T2",
-          "winRate": 51.2,
-          "showRate": 7.3,
+          "winRate": 51.7,
+          "showRate": 7.2,
           "banRate": 0.6
-        },
-        {
-          "name": "关羽",
-          "heroId": 140,
-          "tRank": "T2",
-          "winRate": 49.8,
-          "showRate": 6.8,
-          "banRate": 3.5
         },
         {
           "name": "程咬金",
           "heroId": 144,
           "tRank": "T2",
-          "winRate": 49.1,
-          "showRate": 6.8,
-          "banRate": 0.4
+          "winRate": 49.2,
+          "showRate": 7.0,
+          "banRate": 0.5
         },
         {
           "name": "马超",
           "heroId": 518,
-          "tRank": "T3",
-          "winRate": 51.5,
-          "showRate": 5.8,
+          "tRank": "T2",
+          "winRate": 51.9,
+          "showRate": 6.0,
           "banRate": 5.4
         },
         {
           "name": "孙策",
           "heroId": 510,
           "tRank": "T3",
-          "winRate": 46.9,
-          "showRate": 5.9,
+          "winRate": 46.7,
+          "showRate": 5.8,
+          "banRate": 0.2
+        },
+        {
+          "name": "曹操",
+          "heroId": 128,
+          "tRank": "T3",
+          "winRate": 51.7,
+          "showRate": 5.7,
           "banRate": 0.2
         },
         {
           "name": "白起",
           "heroId": 120,
           "tRank": "T3",
-          "winRate": 51.9,
-          "showRate": 5.9,
+          "winRate": 52.2,
+          "showRate": 5.7,
           "banRate": 0.4
-        },
-        {
-          "name": "曹操",
-          "heroId": 128,
-          "tRank": "T3",
-          "winRate": 52.0,
-          "showRate": 5.8,
-          "banRate": 0.1
         },
         {
           "name": "影",
           "heroId": 558,
           "tRank": "T3",
-          "winRate": 51.4,
-          "showRate": 5.4,
+          "winRate": 52.1,
+          "showRate": 5.2,
           "banRate": 0.5
         },
         {
           "name": "元流之子(坦克)",
           "heroId": 581,
           "tRank": "T3",
-          "winRate": 46.7,
-          "showRate": 5.1,
-          "banRate": 1.2
+          "winRate": 47.4,
+          "showRate": 5.0,
+          "banRate": 1.3
         },
         {
           "name": "元歌",
           "heroId": 125,
           "tRank": "T3",
-          "winRate": 52.8,
+          "winRate": 52.6,
           "showRate": 4.5,
-          "banRate": 2.8
+          "banRate": 3.0
         },
         {
           "name": "老夫子",
           "heroId": 139,
           "tRank": "T3",
-          "winRate": 50.0,
-          "showRate": 4.4,
+          "winRate": 50.4,
+          "showRate": 4.5,
           "banRate": 0.3
         },
         {
           "name": "钟无艳",
           "heroId": 117,
           "tRank": "T3",
-          "winRate": 48.7,
-          "showRate": 4.4,
+          "winRate": 48.6,
+          "showRate": 4.2,
           "banRate": 0.1
         },
         {
           "name": "猪八戒",
           "heroId": 511,
           "tRank": "T3",
-          "winRate": 48.4,
-          "showRate": 4.1,
+          "winRate": 48.5,
+          "showRate": 4.0,
           "banRate": 0.2
         },
         {
@@ -241,30 +241,30 @@
           "heroId": 503,
           "tRank": "T3",
           "winRate": 48.4,
-          "showRate": 3.7,
+          "showRate": 4.0,
           "banRate": 0.2
+        },
+        {
+          "name": "苏烈",
+          "heroId": 194,
+          "tRank": "T3",
+          "winRate": 50.6,
+          "showRate": 3.4,
+          "banRate": 2.3
         },
         {
           "name": "盘古",
           "heroId": 529,
           "tRank": "T3",
           "winRate": 49.8,
-          "showRate": 3.5,
+          "showRate": 3.3,
           "banRate": 2.6
-        },
-        {
-          "name": "苏烈",
-          "heroId": 194,
-          "tRank": "T3",
-          "winRate": 50.3,
-          "showRate": 3.4,
-          "banRate": 2.0
         },
         {
           "name": "橘右京",
           "heroId": 163,
           "tRank": "T3",
-          "winRate": 50.7,
+          "winRate": 50.3,
           "showRate": 3.3,
           "banRate": 0.1
         },
@@ -272,7 +272,7 @@
           "name": "花木兰",
           "heroId": 154,
           "tRank": "T3",
-          "winRate": 47.4,
+          "winRate": 47.8,
           "showRate": 3.3,
           "banRate": 0.1
         },
@@ -280,71 +280,71 @@
           "name": "夏洛特",
           "heroId": 536,
           "tRank": "T3",
-          "winRate": 48.2,
+          "winRate": 48.0,
           "showRate": 3.1,
           "banRate": 0.1
+        },
+        {
+          "name": "达摩",
+          "heroId": 134,
+          "tRank": "T3",
+          "winRate": 48.8,
+          "showRate": 2.9,
+          "banRate": 0.0
+        },
+        {
+          "name": "亚连",
+          "heroId": 514,
+          "tRank": "T3",
+          "winRate": 49.9,
+          "showRate": 2.8,
+          "banRate": 0.2
         },
         {
           "name": "曜",
           "heroId": 522,
           "tRank": "T3",
-          "winRate": 48.6,
-          "showRate": 2.8,
+          "winRate": 49.2,
+          "showRate": 2.7,
           "banRate": 0.1
         },
         {
           "name": "嫦娥",
           "heroId": 515,
           "tRank": "T3",
-          "winRate": 51.0,
-          "showRate": 2.4,
+          "winRate": 51.5,
+          "showRate": 2.5,
           "banRate": 0.7
         },
         {
           "name": "赵怀真",
           "heroId": 544,
           "tRank": "T3",
-          "winRate": 50.1,
-          "showRate": 2.0,
+          "winRate": 50.3,
+          "showRate": 2.1,
           "banRate": 0.3
-        },
-        {
-          "name": "达摩",
-          "heroId": 134,
-          "tRank": "T3",
-          "winRate": 48.7,
-          "showRate": 1.9,
-          "banRate": 0.0
-        },
-        {
-          "name": "蒙恬",
-          "heroId": 527,
-          "tRank": "T3",
-          "winRate": 45.9,
-          "showRate": 1.7,
-          "banRate": 0.3
-        },
-        {
-          "name": "亚连",
-          "heroId": 514,
-          "tRank": "T3",
-          "winRate": 51.1,
-          "showRate": 1.7,
-          "banRate": 0.1
         },
         {
           "name": "姬小满",
           "heroId": 564,
           "tRank": "T3",
-          "winRate": 46.9,
-          "showRate": 1.5,
+          "winRate": 48.2,
+          "showRate": 1.6,
           "banRate": 0.1
+        },
+        {
+          "name": "蒙恬",
+          "heroId": 527,
+          "tRank": "T3",
+          "winRate": 46.6,
+          "showRate": 1.6,
+          "banRate": 0.3
         },
         {
           "name": "梦奇",
           "heroId": 198,
           "tRank": "T3",
-          "winRate": 53.0,
+          "winRate": 51.1,
           "showRate": 0.8,
           "banRate": 0.1
         }
@@ -357,207 +357,207 @@
           "name": "甄姬",
           "heroId": 127,
           "tRank": "T0",
-          "winRate": 50.6,
-          "showRate": 24.4,
-          "banRate": 5.6
+          "winRate": 50.5,
+          "showRate": 23.4,
+          "banRate": 5.4
+        },
+        {
+          "name": "小乔",
+          "heroId": 106,
+          "tRank": "T0",
+          "winRate": 47.8,
+          "showRate": 24.3,
+          "banRate": 0.3
+        },
+        {
+          "name": "大乔",
+          "heroId": 191,
+          "tRank": "T0",
+          "winRate": 50.5,
+          "showRate": 11.5,
+          "banRate": 48.4
         },
         {
           "name": "妲己",
           "heroId": 109,
           "tRank": "T1",
-          "winRate": 48.5,
-          "showRate": 19.7,
-          "banRate": 3.9
+          "winRate": 48.7,
+          "showRate": 19.4,
+          "banRate": 4.2
         },
         {
-          "name": "小乔",
-          "heroId": 106,
+          "name": "墨子",
+          "heroId": 108,
           "tRank": "T1",
-          "winRate": 47.8,
-          "showRate": 19.6,
-          "banRate": 0.2
-        },
-        {
-          "name": "大乔",
-          "heroId": 191,
-          "tRank": "T1",
-          "winRate": 50.6,
-          "showRate": 9.8,
-          "banRate": 48.3
+          "winRate": 50.5,
+          "showRate": 10.6,
+          "banRate": 37.0
         },
         {
           "name": "王昭君",
           "heroId": 152,
           "tRank": "T1",
-          "winRate": 49.2,
-          "showRate": 15.1,
+          "winRate": 49.3,
+          "showRate": 14.6,
           "banRate": 10.3
         },
         {
           "name": "安琪拉",
           "heroId": 142,
           "tRank": "T1",
-          "winRate": 48.2,
-          "showRate": 16.2,
-          "banRate": 1.6
-        },
-        {
-          "name": "墨子",
-          "heroId": 108,
-          "tRank": "T1",
-          "winRate": 50.7,
-          "showRate": 10.6,
-          "banRate": 35.8
+          "winRate": 48.4,
+          "showRate": 15.9,
+          "banRate": 1.8
         },
         {
           "name": "姜子牙",
           "heroId": 148,
           "tRank": "T2",
-          "winRate": 49.4,
-          "showRate": 14.4,
+          "winRate": 49.3,
+          "showRate": 13.4,
           "banRate": 6.3
-        },
-        {
-          "name": "张良",
-          "heroId": 156,
-          "tRank": "T2",
-          "winRate": 50.5,
-          "showRate": 7.6,
-          "banRate": 37.1
-        },
-        {
-          "name": "金蝉",
-          "heroId": 540,
-          "tRank": "T2",
-          "winRate": 48.0,
-          "showRate": 8.6,
-          "banRate": 22.2
-        },
-        {
-          "name": "女娲",
-          "heroId": 179,
-          "tRank": "T2",
-          "winRate": 52.3,
-          "showRate": 8.9,
-          "banRate": 7.9
         },
         {
           "name": "诸葛亮",
           "heroId": 190,
           "tRank": "T2",
-          "winRate": 47.7,
-          "showRate": 8.7,
-          "banRate": 0.7
+          "winRate": 47.9,
+          "showRate": 11.8,
+          "banRate": 0.9
         },
         {
-          "name": "貂蝉",
-          "heroId": 141,
+          "name": "张良",
+          "heroId": 156,
+          "tRank": "T2",
+          "winRate": 50.6,
+          "showRate": 7.5,
+          "banRate": 36.7
+        },
+        {
+          "name": "金蝉",
+          "heroId": 540,
+          "tRank": "T2",
+          "winRate": 48.2,
+          "showRate": 8.4,
+          "banRate": 23.0
+        },
+        {
+          "name": "女娲",
+          "heroId": 179,
           "tRank": "T2",
           "winRate": 52.2,
-          "showRate": 8.1,
-          "banRate": 2.5
+          "showRate": 8.5,
+          "banRate": 7.7
         },
         {
           "name": "西施",
           "heroId": 523,
           "tRank": "T2",
-          "winRate": 51.8,
-          "showRate": 7.1,
-          "banRate": 12.4
+          "winRate": 51.7,
+          "showRate": 7.4,
+          "banRate": 12.3
+        },
+        {
+          "name": "貂蝉",
+          "heroId": 141,
+          "tRank": "T2",
+          "winRate": 52.0,
+          "showRate": 7.8,
+          "banRate": 2.4
+        },
+        {
+          "name": "干将莫邪",
+          "heroId": 182,
+          "tRank": "T2",
+          "winRate": 51.0,
+          "showRate": 7.5,
+          "banRate": 1.3
         },
         {
           "name": "海诺",
           "heroId": 563,
           "tRank": "T2",
           "winRate": 48.2,
-          "showRate": 7.4,
-          "banRate": 6.2
+          "showRate": 6.9,
+          "banRate": 6.1
         },
         {
           "name": "米莱狄",
           "heroId": 504,
           "tRank": "T2",
-          "winRate": 46.5,
-          "showRate": 6.2,
-          "banRate": 13.1
+          "winRate": 46.1,
+          "showRate": 6.0,
+          "banRate": 13.2
         },
         {
           "name": "武则天",
           "heroId": 136,
-          "tRank": "T2",
+          "tRank": "T3",
           "winRate": 51.4,
-          "showRate": 6.8,
+          "showRate": 6.2,
           "banRate": 0.4
-        },
-        {
-          "name": "干将莫邪",
-          "heroId": 182,
-          "tRank": "T2",
-          "winRate": 51.3,
-          "showRate": 6.5,
-          "banRate": 1.1
         },
         {
           "name": "嬴政",
           "heroId": 110,
           "tRank": "T3",
-          "winRate": 52.1,
-          "showRate": 6.0,
+          "winRate": 52.5,
+          "showRate": 5.4,
           "banRate": 0.1
         },
         {
           "name": "元流之子(法师)",
           "heroId": 582,
           "tRank": "T3",
-          "winRate": 54.3,
-          "showRate": 5.4,
-          "banRate": 1.6
+          "winRate": 54.0,
+          "showRate": 4.7,
+          "banRate": 1.2
         },
         {
           "name": "沈梦溪",
           "heroId": 312,
           "tRank": "T3",
-          "winRate": 50.9,
+          "winRate": 50.8,
           "showRate": 4.3,
-          "banRate": 2.7
-        },
-        {
-          "name": "弈星",
-          "heroId": 197,
-          "tRank": "T3",
-          "winRate": 49.8,
-          "showRate": 4.3,
-          "banRate": 0.6
-        },
-        {
-          "name": "海月",
-          "heroId": 521,
-          "tRank": "T3",
-          "winRate": 49.1,
-          "showRate": 3.8,
-          "banRate": 7.9
+          "banRate": 2.8
         },
         {
           "name": "司马懿",
           "heroId": 137,
           "tRank": "T3",
-          "winRate": 52.4,
+          "winRate": 52.6,
           "showRate": 4.1,
-          "banRate": 1.0
+          "banRate": 1.1
+        },
+        {
+          "name": "海月",
+          "heroId": 521,
+          "tRank": "T3",
+          "winRate": 49.6,
+          "showRate": 3.7,
+          "banRate": 8.1
+        },
+        {
+          "name": "弈星",
+          "heroId": 197,
+          "tRank": "T3",
+          "winRate": 49.7,
+          "showRate": 3.9,
+          "banRate": 0.6
         },
         {
           "name": "杨玉环",
           "heroId": 176,
           "tRank": "T3",
-          "winRate": 49.9,
-          "showRate": 4.0,
+          "winRate": 50.5,
+          "showRate": 3.9,
           "banRate": 0.2
         },
         {
           "name": "不知火舞",
           "heroId": 157,
           "tRank": "T3",
-          "winRate": 46.8,
+          "winRate": 46.7,
           "showRate": 3.4,
           "banRate": 0.2
         },
@@ -565,40 +565,40 @@
           "name": "扁鹊",
           "heroId": 119,
           "tRank": "T3",
-          "winRate": 50.5,
+          "winRate": 51.3,
           "showRate": 3.1,
           "banRate": 0.1
-        },
-        {
-          "name": "上官婉儿",
-          "heroId": 513,
-          "tRank": "T3",
-          "winRate": 52.1,
-          "showRate": 2.5,
-          "banRate": 0.5
         },
         {
           "name": "嫦娥",
           "heroId": 515,
           "tRank": "T3",
-          "winRate": 51.0,
-          "showRate": 2.4,
+          "winRate": 51.5,
+          "showRate": 2.5,
           "banRate": 0.7
+        },
+        {
+          "name": "上官婉儿",
+          "heroId": 513,
+          "tRank": "T3",
+          "winRate": 52.3,
+          "showRate": 2.3,
+          "banRate": 0.6
         },
         {
           "name": "周瑜",
           "heroId": 124,
           "tRank": "T3",
-          "winRate": 49.4,
-          "showRate": 2.3,
+          "winRate": 49.7,
+          "showRate": 2.2,
           "banRate": 0.1
         },
         {
           "name": "高渐离",
           "heroId": 115,
           "tRank": "T3",
-          "winRate": 48.8,
-          "showRate": 1.7,
+          "winRate": 49.8,
+          "showRate": 1.6,
           "banRate": 0.0
         }
       ]
@@ -607,83 +607,83 @@
       "name": "发育路",
       "heroes": [
         {
+          "name": "虞姬",
+          "heroId": 174,
+          "tRank": "T0",
+          "winRate": 50.0,
+          "showRate": 22.0,
+          "banRate": 10.3
+        },
+        {
           "name": "敖隐",
           "heroId": 519,
           "tRank": "T0",
-          "winRate": 48.7,
-          "showRate": 10.8,
-          "banRate": 58.4
+          "winRate": 49.1,
+          "showRate": 10.6,
+          "banRate": 55.7
         },
         {
           "name": "后羿",
           "heroId": 169,
           "tRank": "T0",
-          "winRate": 52.0,
-          "showRate": 23.1,
+          "winRate": 51.7,
+          "showRate": 22.6,
           "banRate": 0.5
-        },
-        {
-          "name": "虞姬",
-          "heroId": 174,
-          "tRank": "T0",
-          "winRate": 50.3,
-          "showRate": 20.7,
-          "banRate": 10.3
         },
         {
           "name": "孙权",
           "heroId": 151,
           "tRank": "T1",
           "winRate": 51.2,
-          "showRate": 16.2,
-          "banRate": 24.7
+          "showRate": 16.0,
+          "banRate": 22.6
         },
         {
           "name": "李元芳",
           "heroId": 173,
           "tRank": "T1",
-          "winRate": 51.3,
-          "showRate": 18.2,
+          "winRate": 51.5,
+          "showRate": 17.5,
           "banRate": 4.4
+        },
+        {
+          "name": "百里守约",
+          "heroId": 196,
+          "tRank": "T1",
+          "winRate": 49.8,
+          "showRate": 16.1,
+          "banRate": 4.1
         },
         {
           "name": "狄仁杰",
           "heroId": 133,
           "tRank": "T2",
-          "winRate": 50.5,
-          "showRate": 15.1,
-          "banRate": 1.4
+          "winRate": 50.6,
+          "showRate": 14.1,
+          "banRate": 1.3
         },
         {
           "name": "马可波罗",
           "heroId": 132,
           "tRank": "T2",
           "winRate": 47.3,
-          "showRate": 14.2,
+          "showRate": 13.8,
           "banRate": 1.5
-        },
-        {
-          "name": "百里守约",
-          "heroId": 196,
-          "tRank": "T2",
-          "winRate": 50.0,
-          "showRate": 14.0,
-          "banRate": 1.6
         },
         {
           "name": "元流之子(射手)",
           "heroId": 584,
           "tRank": "T2",
-          "winRate": 51.3,
-          "showRate": 11.4,
-          "banRate": 3.5
+          "winRate": 51.7,
+          "showRate": 10.6,
+          "banRate": 3.4
         },
         {
           "name": "鲁班七号",
           "heroId": 112,
           "tRank": "T2",
           "winRate": 48.3,
-          "showRate": 10.4,
+          "showRate": 10.7,
           "banRate": 0.1
         },
         {
@@ -691,79 +691,79 @@
           "heroId": 155,
           "tRank": "T2",
           "winRate": 49.8,
-          "showRate": 9.2,
-          "banRate": 1.0
+          "showRate": 9.0,
+          "banRate": 1.1
         },
         {
           "name": "莱西奥",
           "heroId": 545,
           "tRank": "T2",
-          "winRate": 52.4,
-          "showRate": 7.5,
+          "winRate": 52.2,
+          "showRate": 7.4,
           "banRate": 0.1
         },
         {
           "name": "黄忠",
           "heroId": 192,
           "tRank": "T2",
-          "winRate": 50.8,
-          "showRate": 6.9,
-          "banRate": 0.1
-        },
-        {
-          "name": "孙尚香",
-          "heroId": 111,
-          "tRank": "T2",
-          "winRate": 46.2,
-          "showRate": 6.8,
+          "winRate": 50.7,
+          "showRate": 6.7,
           "banRate": 0.1
         },
         {
           "name": "伽罗",
           "heroId": 508,
           "tRank": "T2",
-          "winRate": 51.4,
+          "winRate": 51.5,
           "showRate": 6.6,
           "banRate": 0.4
+        },
+        {
+          "name": "孙尚香",
+          "heroId": 111,
+          "tRank": "T2",
+          "winRate": 46.3,
+          "showRate": 6.3,
+          "banRate": 0.1
+        },
+        {
+          "name": "公孙离",
+          "heroId": 199,
+          "tRank": "T3",
+          "winRate": 47.8,
+          "showRate": 5.8,
+          "banRate": 1.5
         },
         {
           "name": "戈娅",
           "heroId": 548,
           "tRank": "T3",
-          "winRate": 50.6,
-          "showRate": 5.7,
+          "winRate": 51.0,
+          "showRate": 5.3,
           "banRate": 0.5
         },
         {
           "name": "阿古朵",
           "heroId": 533,
           "tRank": "T3",
-          "winRate": 52.2,
-          "showRate": 5.4,
-          "banRate": 1.6
-        },
-        {
-          "name": "公孙离",
-          "heroId": 199,
-          "tRank": "T3",
-          "winRate": 48.2,
-          "showRate": 5.2,
+          "winRate": 52.3,
+          "showRate": 4.9,
           "banRate": 1.5
-        },
-        {
-          "name": "蒙犽",
-          "heroId": 524,
-          "tRank": "T3",
-          "winRate": 50.2,
-          "showRate": 1.7,
-          "banRate": 0.1
         },
         {
           "name": "苍",
           "heroId": 177,
           "tRank": "T3",
-          "winRate": 47.4,
-          "showRate": 1.7,
+          "winRate": 48.2,
+          "showRate": 1.8,
+          "banRate": 0.1
+        },
+        {
+          "name": "蒙犽",
+          "heroId": 524,
+          "tRank": "T3",
+          "winRate": 50.7,
+          "showRate": 1.6,
           "banRate": 0.1
         }
       ]
@@ -775,41 +775,41 @@
           "name": "瑶",
           "heroId": 505,
           "tRank": "T0",
-          "winRate": 50.0,
-          "showRate": 22.3,
-          "banRate": 54.0
+          "winRate": 49.7,
+          "showRate": 22.2,
+          "banRate": 53.4
         },
         {
           "name": "朵莉亚",
           "heroId": 159,
           "tRank": "T0",
-          "winRate": 47.8,
-          "showRate": 22.6,
-          "banRate": 38.1
+          "winRate": 47.7,
+          "showRate": 22.3,
+          "banRate": 35.6
+        },
+        {
+          "name": "大乔",
+          "heroId": 191,
+          "tRank": "T0",
+          "winRate": 50.5,
+          "showRate": 11.5,
+          "banRate": 48.4
         },
         {
           "name": "蔡文姬",
           "heroId": 184,
           "tRank": "T0",
-          "winRate": 51.5,
-          "showRate": 16.4,
-          "banRate": 26.4
-        },
-        {
-          "name": "大乔",
-          "heroId": 191,
-          "tRank": "T1",
-          "winRate": 50.6,
-          "showRate": 9.8,
-          "banRate": 48.3
+          "winRate": 51.7,
+          "showRate": 16.5,
+          "banRate": 26.0
         },
         {
           "name": "少司缘",
           "heroId": 577,
           "tRank": "T1",
-          "winRate": 51.0,
-          "showRate": 10.8,
-          "banRate": 42.3
+          "winRate": 51.3,
+          "showRate": 11.2,
+          "banRate": 42.5
         },
         {
           "name": "项羽",
@@ -820,139 +820,139 @@
           "banRate": 2.2
         },
         {
-          "name": "王昭君",
-          "heroId": 152,
-          "tRank": "T1",
-          "winRate": 49.2,
-          "showRate": 15.1,
-          "banRate": 10.3
-        },
-        {
           "name": "墨子",
           "heroId": 108,
           "tRank": "T1",
-          "winRate": 50.7,
+          "winRate": 50.5,
           "showRate": 10.6,
-          "banRate": 35.8
+          "banRate": 37.0
+        },
+        {
+          "name": "王昭君",
+          "heroId": 152,
+          "tRank": "T1",
+          "winRate": 49.3,
+          "showRate": 14.6,
+          "banRate": 10.3
         },
         {
           "name": "廉颇",
           "heroId": 105,
           "tRank": "T1",
-          "winRate": 50.4,
-          "showRate": 15.5,
-          "banRate": 5.5
+          "winRate": 50.2,
+          "showRate": 14.7,
+          "banRate": 5.8
         },
         {
           "name": "姜子牙",
           "heroId": 148,
           "tRank": "T2",
-          "winRate": 49.4,
-          "showRate": 14.4,
+          "winRate": 49.3,
+          "showRate": 13.4,
           "banRate": 6.3
         },
         {
           "name": "张良",
           "heroId": 156,
           "tRank": "T2",
-          "winRate": 50.5,
-          "showRate": 7.6,
-          "banRate": 37.1
+          "winRate": 50.6,
+          "showRate": 7.5,
+          "banRate": 36.7
         },
         {
           "name": "金蝉",
           "heroId": 540,
           "tRank": "T2",
-          "winRate": 48.0,
-          "showRate": 8.6,
-          "banRate": 22.2
-        },
-        {
-          "name": "庄周",
-          "heroId": 113,
-          "tRank": "T2",
-          "winRate": 50.3,
-          "showRate": 5.7,
-          "banRate": 45.9
+          "winRate": 48.2,
+          "showRate": 8.4,
+          "banRate": 23.0
         },
         {
           "name": "夏侯惇",
           "heroId": 126,
           "tRank": "T2",
           "winRate": 49.8,
-          "showRate": 10.3,
-          "banRate": 1.0
+          "showRate": 10.0,
+          "banRate": 1.1
+        },
+        {
+          "name": "庄周",
+          "heroId": 113,
+          "tRank": "T2",
+          "winRate": 49.6,
+          "showRate": 5.5,
+          "banRate": 45.4
         },
         {
           "name": "桑启",
           "heroId": 534,
           "tRank": "T2",
-          "winRate": 53.1,
+          "winRate": 52.7,
           "showRate": 9.8,
-          "banRate": 1.4
+          "banRate": 1.3
         },
         {
           "name": "钟馗",
           "heroId": 175,
           "tRank": "T2",
-          "winRate": 47.8,
-          "showRate": 7.8,
-          "banRate": 16.8
+          "winRate": 47.7,
+          "showRate": 8.0,
+          "banRate": 17.4
         },
         {
           "name": "东皇太一",
           "heroId": 187,
           "tRank": "T2",
-          "winRate": 49.3,
+          "winRate": 49.1,
           "showRate": 7.3,
-          "banRate": 21.9
+          "banRate": 22.0
         },
         {
           "name": "大禹",
           "heroId": 188,
           "tRank": "T2",
-          "winRate": 54.7,
-          "showRate": 7.9,
-          "banRate": 13.1
+          "winRate": 55.2,
+          "showRate": 7.8,
+          "banRate": 12.3
         },
         {
           "name": "张飞",
           "heroId": 171,
           "tRank": "T2",
-          "winRate": 48.8,
-          "showRate": 8.1,
-          "banRate": 1.8
+          "winRate": 48.7,
+          "showRate": 7.9,
+          "banRate": 2.0
         },
         {
           "name": "刘邦",
           "heroId": 149,
           "tRank": "T2",
-          "winRate": 51.0,
-          "showRate": 6.7,
-          "banRate": 10.0
+          "winRate": 51.1,
+          "showRate": 6.4,
+          "banRate": 13.6
+        },
+        {
+          "name": "盾山",
+          "heroId": 509,
+          "tRank": "T2",
+          "winRate": 55.4,
+          "showRate": 4.0,
+          "banRate": 39.3
         },
         {
           "name": "刘禅",
           "heroId": 114,
           "tRank": "T3",
-          "winRate": 48.1,
-          "showRate": 6.3,
+          "winRate": 47.9,
+          "showRate": 6.1,
           "banRate": 1.3
-        },
-        {
-          "name": "盾山",
-          "heroId": 509,
-          "tRank": "T3",
-          "winRate": 55.8,
-          "showRate": 3.8,
-          "banRate": 38.8
         },
         {
           "name": "孙膑",
           "heroId": 118,
           "tRank": "T3",
-          "winRate": 50.1,
-          "showRate": 6.0,
+          "winRate": 49.9,
+          "showRate": 5.7,
           "banRate": 1.0
         },
         {
@@ -960,80 +960,80 @@
           "heroId": 501,
           "tRank": "T3",
           "winRate": 47.9,
-          "showRate": 4.1,
-          "banRate": 0.6
+          "showRate": 3.9,
+          "banRate": 0.5
         },
         {
           "name": "杨玉环",
           "heroId": 176,
           "tRank": "T3",
-          "winRate": 49.9,
-          "showRate": 4.0,
+          "winRate": 50.5,
+          "showRate": 3.9,
           "banRate": 0.2
         },
         {
           "name": "牛魔",
           "heroId": 168,
           "tRank": "T3",
-          "winRate": 48.9,
-          "showRate": 4.0,
+          "winRate": 49.2,
+          "showRate": 3.9,
           "banRate": 0.1
         },
         {
           "name": "元流之子(辅助)",
           "heroId": 585,
           "tRank": "T3",
-          "winRate": 52.6,
+          "winRate": 52.4,
           "showRate": 3.4,
-          "banRate": 2.3
+          "banRate": 2.2
         },
         {
           "name": "苏烈",
           "heroId": 194,
           "tRank": "T3",
-          "winRate": 50.3,
+          "winRate": 50.6,
           "showRate": 3.4,
-          "banRate": 2.0
-        },
-        {
-          "name": "鲁班大师",
-          "heroId": 525,
-          "tRank": "T3",
-          "winRate": 45.1,
-          "showRate": 2.5,
-          "banRate": 3.6
+          "banRate": 2.3
         },
         {
           "name": "赵怀真",
           "heroId": 544,
           "tRank": "T3",
-          "winRate": 50.1,
-          "showRate": 2.0,
+          "winRate": 50.3,
+          "showRate": 2.1,
           "banRate": 0.3
         },
         {
           "name": "鬼谷子",
           "heroId": 189,
           "tRank": "T3",
-          "winRate": 50.4,
+          "winRate": 51.0,
+          "showRate": 1.7,
+          "banRate": 3.3
+        },
+        {
+          "name": "鲁班大师",
+          "heroId": 525,
+          "tRank": "T3",
+          "winRate": 46.7,
           "showRate": 1.6,
-          "banRate": 3.4
+          "banRate": 2.3
         },
         {
           "name": "太乙真人",
           "heroId": 186,
           "tRank": "T3",
-          "winRate": 49.2,
-          "showRate": 1.0,
+          "winRate": 50.6,
+          "showRate": 1.1,
           "banRate": 0.5
         },
         {
           "name": "空空儿",
           "heroId": 550,
           "tRank": "T3",
-          "winRate": 48.5,
+          "winRate": 48.8,
           "showRate": 0.6,
-          "banRate": 1.9
+          "banRate": 1.8
         }
       ]
     },
@@ -1044,200 +1044,200 @@
           "name": "哪吒",
           "heroId": 180,
           "tRank": "T0",
-          "winRate": 54.2,
-          "showRate": 16.1,
-          "banRate": 64.9
+          "winRate": 54.5,
+          "showRate": 15.9,
+          "banRate": 65.3
         },
         {
           "name": "赵云",
           "heroId": 107,
           "tRank": "T1",
-          "winRate": 52.9,
-          "showRate": 18.7,
-          "banRate": 2.0
+          "winRate": 53.3,
+          "showRate": 18.8,
+          "banRate": 2.1
         },
         {
           "name": "李元芳",
           "heroId": 173,
           "tRank": "T1",
-          "winRate": 51.3,
-          "showRate": 18.2,
+          "winRate": 51.5,
+          "showRate": 17.5,
           "banRate": 4.4
         },
         {
           "name": "蚩奼",
           "heroId": 172,
-          "tRank": "T1",
-          "winRate": 51.3,
-          "showRate": 12.9,
-          "banRate": 18.1
+          "tRank": "T2",
+          "winRate": 51.7,
+          "showRate": 12.2,
+          "banRate": 18.2
         },
         {
           "name": "宫本武藏",
           "heroId": 130,
           "tRank": "T2",
-          "winRate": 49.2,
-          "showRate": 11.4,
-          "banRate": 20.2
+          "winRate": 49.4,
+          "showRate": 11.1,
+          "banRate": 20.6
         },
         {
           "name": "孙悟空",
           "heroId": 167,
           "tRank": "T2",
-          "winRate": 46.3,
-          "showRate": 13.9,
-          "banRate": 1.5
+          "winRate": 46.4,
+          "showRate": 13.6,
+          "banRate": 1.6
         },
         {
           "name": "芈月",
           "heroId": 121,
           "tRank": "T2",
-          "winRate": 53.3,
-          "showRate": 10.3,
-          "banRate": 18.0
+          "winRate": 53.0,
+          "showRate": 9.9,
+          "banRate": 17.7
         },
         {
-          "name": "云缨",
-          "heroId": 538,
+          "name": "诸葛亮",
+          "heroId": 190,
           "tRank": "T2",
-          "winRate": 53.3,
-          "showRate": 11.5,
-          "banRate": 4.7
+          "winRate": 47.9,
+          "showRate": 11.8,
+          "banRate": 0.9
         },
         {
           "name": "铠",
           "heroId": 193,
           "tRank": "T2",
-          "winRate": 51.6,
-          "showRate": 11.3,
-          "banRate": 5.9
+          "winRate": 51.4,
+          "showRate": 10.8,
+          "banRate": 5.6
+        },
+        {
+          "name": "云缨",
+          "heroId": 538,
+          "tRank": "T2",
+          "winRate": 53.1,
+          "showRate": 10.8,
+          "banRate": 4.3
         },
         {
           "name": "夏侯惇",
           "heroId": 126,
           "tRank": "T2",
           "winRate": 49.8,
-          "showRate": 10.3,
-          "banRate": 1.0
-        },
-        {
-          "name": "大司命",
-          "heroId": 517,
-          "tRank": "T2",
-          "winRate": 47.1,
-          "showRate": 8.9,
-          "banRate": 2.1
+          "showRate": 10.0,
+          "banRate": 1.1
         },
         {
           "name": "司空震",
           "heroId": 537,
           "tRank": "T2",
-          "winRate": 49.8,
-          "showRate": 8.8,
-          "banRate": 1.6
-        },
-        {
-          "name": "诸葛亮",
-          "heroId": 190,
-          "tRank": "T2",
-          "winRate": 47.7,
-          "showRate": 8.7,
-          "banRate": 0.7
+          "winRate": 49.9,
+          "showRate": 9.8,
+          "banRate": 2.0
         },
         {
           "name": "韩信",
           "heroId": 150,
           "tRank": "T2",
-          "winRate": 49.6,
-          "showRate": 8.5,
+          "winRate": 49.3,
+          "showRate": 9.6,
           "banRate": 1.3
+        },
+        {
+          "name": "大司命",
+          "heroId": 517,
+          "tRank": "T2",
+          "winRate": 46.7,
+          "showRate": 8.5,
+          "banRate": 2.2
         },
         {
           "name": "亚瑟",
           "heroId": 166,
           "tRank": "T2",
-          "winRate": 48.4,
+          "winRate": 48.2,
           "showRate": 8.3,
-          "banRate": 0.2
+          "banRate": 0.3
         },
         {
           "name": "杨戬",
           "heroId": 178,
           "tRank": "T2",
-          "winRate": 51.2,
-          "showRate": 7.3,
+          "winRate": 51.7,
+          "showRate": 7.2,
           "banRate": 0.6
         },
         {
           "name": "李白",
           "heroId": 131,
           "tRank": "T2",
-          "winRate": 49.3,
-          "showRate": 7.1,
+          "winRate": 49.0,
+          "showRate": 6.7,
           "banRate": 0.8
+        },
+        {
+          "name": "马超",
+          "heroId": 518,
+          "tRank": "T2",
+          "winRate": 51.9,
+          "showRate": 6.0,
+          "banRate": 5.4
         },
         {
           "name": "兰陵王",
           "heroId": 153,
           "tRank": "T3",
-          "winRate": 48.1,
-          "showRate": 6.0,
-          "banRate": 3.9
-        },
-        {
-          "name": "马超",
-          "heroId": 518,
-          "tRank": "T3",
-          "winRate": 51.5,
-          "showRate": 5.8,
-          "banRate": 5.4
+          "winRate": 48.2,
+          "showRate": 5.9,
+          "banRate": 4.0
         },
         {
           "name": "孙策",
           "heroId": 510,
           "tRank": "T3",
-          "winRate": 46.9,
-          "showRate": 5.9,
+          "winRate": 46.7,
+          "showRate": 5.8,
           "banRate": 0.2
         },
         {
           "name": "曹操",
           "heroId": 128,
           "tRank": "T3",
-          "winRate": 52.0,
-          "showRate": 5.8,
-          "banRate": 0.1
+          "winRate": 51.7,
+          "showRate": 5.7,
+          "banRate": 0.2
         },
         {
-          "name": "阿古朵",
-          "heroId": 533,
+          "name": "暃",
+          "heroId": 542,
           "tRank": "T3",
-          "winRate": 52.2,
-          "showRate": 5.4,
-          "banRate": 1.6
+          "winRate": 50.1,
+          "showRate": 5.5,
+          "banRate": 0.9
         },
         {
           "name": "影",
           "heroId": 558,
           "tRank": "T3",
-          "winRate": 51.4,
-          "showRate": 5.4,
+          "winRate": 52.1,
+          "showRate": 5.2,
           "banRate": 0.5
         },
         {
           "name": "元流之子(坦克)",
           "heroId": 581,
           "tRank": "T3",
-          "winRate": 46.7,
-          "showRate": 5.1,
-          "banRate": 1.2
+          "winRate": 47.4,
+          "showRate": 5.0,
+          "banRate": 1.3
         },
         {
           "name": "澜",
           "heroId": 528,
           "tRank": "T3",
-          "winRate": 47.4,
-          "showRate": 5.1,
+          "winRate": 47.5,
+          "showRate": 5.0,
           "banRate": 1.5
         },
         {
@@ -1245,134 +1245,134 @@
           "heroId": 129,
           "tRank": "T3",
           "winRate": 47.1,
-          "showRate": 5.2,
-          "banRate": 0.3
+          "showRate": 5.1,
+          "banRate": 0.4
+        },
+        {
+          "name": "阿古朵",
+          "heroId": 533,
+          "tRank": "T3",
+          "winRate": 52.3,
+          "showRate": 4.9,
+          "banRate": 1.5
         },
         {
           "name": "阿轲",
           "heroId": 116,
           "tRank": "T3",
           "winRate": 50.2,
-          "showRate": 5.1,
-          "banRate": 1.2
-        },
-        {
-          "name": "钟无艳",
-          "heroId": 117,
-          "tRank": "T3",
-          "winRate": 48.7,
-          "showRate": 4.4,
-          "banRate": 0.1
-        },
-        {
-          "name": "猪八戒",
-          "heroId": 511,
-          "tRank": "T3",
-          "winRate": 48.4,
-          "showRate": 4.1,
-          "banRate": 0.2
-        },
-        {
-          "name": "百里玄策",
-          "heroId": 195,
-          "tRank": "T3",
-          "winRate": 49.1,
-          "showRate": 4.1,
-          "banRate": 0.4
-        },
-        {
-          "name": "司马懿",
-          "heroId": 137,
-          "tRank": "T3",
-          "winRate": 52.4,
-          "showRate": 4.1,
-          "banRate": 1.0
+          "showRate": 4.9,
+          "banRate": 1.3
         },
         {
           "name": "裴擒虎",
           "heroId": 502,
           "tRank": "T3",
-          "winRate": 50.0,
-          "showRate": 4.0,
+          "winRate": 50.2,
+          "showRate": 4.2,
+          "banRate": 1.3
+        },
+        {
+          "name": "百里玄策",
+          "heroId": 195,
+          "tRank": "T3",
+          "winRate": 49.3,
+          "showRate": 4.2,
+          "banRate": 0.4
+        },
+        {
+          "name": "钟无艳",
+          "heroId": 117,
+          "tRank": "T3",
+          "winRate": 48.6,
+          "showRate": 4.2,
+          "banRate": 0.1
+        },
+        {
+          "name": "司马懿",
+          "heroId": 137,
+          "tRank": "T3",
+          "winRate": 52.6,
+          "showRate": 4.1,
           "banRate": 1.1
+        },
+        {
+          "name": "猪八戒",
+          "heroId": 511,
+          "tRank": "T3",
+          "winRate": 48.5,
+          "showRate": 4.0,
+          "banRate": 0.2
         },
         {
           "name": "杨玉环",
           "heroId": 176,
           "tRank": "T3",
-          "winRate": 49.9,
-          "showRate": 4.0,
-          "banRate": 0.2
-        },
-        {
-          "name": "暃",
-          "heroId": 542,
-          "tRank": "T3",
-          "winRate": 51.5,
+          "winRate": 50.5,
           "showRate": 3.9,
-          "banRate": 0.7
+          "banRate": 0.2
         },
         {
           "name": "盘古",
           "heroId": 529,
           "tRank": "T3",
           "winRate": 49.8,
-          "showRate": 3.5,
+          "showRate": 3.3,
           "banRate": 2.6
         },
         {
           "name": "橘右京",
           "heroId": 163,
           "tRank": "T3",
-          "winRate": 50.7,
+          "winRate": 50.3,
           "showRate": 3.3,
           "banRate": 0.1
-        },
-        {
-          "name": "娜可露露",
-          "heroId": 162,
-          "tRank": "T3",
-          "winRate": 48.3,
-          "showRate": 3.2,
-          "banRate": 0.0
         },
         {
           "name": "镜",
           "heroId": 531,
           "tRank": "T3",
-          "winRate": 49.2,
+          "winRate": 49.1,
           "showRate": 3.0,
           "banRate": 1.7
         },
         {
-          "name": "元流之子(刺客)",
-          "heroId": 583,
+          "name": "娜可露露",
+          "heroId": 162,
           "tRank": "T3",
-          "winRate": 49.7,
-          "showRate": 2.8,
-          "banRate": 1.0
+          "winRate": 48.5,
+          "showRate": 3.1,
+          "banRate": 0.0
         },
         {
           "name": "曜",
           "heroId": 522,
           "tRank": "T3",
-          "winRate": 48.6,
-          "showRate": 2.8,
+          "winRate": 49.2,
+          "showRate": 2.7,
           "banRate": 0.1
+        },
+        {
+          "name": "元流之子(刺客)",
+          "heroId": 583,
+          "tRank": "T3",
+          "winRate": 49.1,
+          "showRate": 2.5,
+          "banRate": 0.8
         },
         {
           "name": "嫦娥",
           "heroId": 515,
           "tRank": "T3",
-          "winRate": 51.0,
-          "showRate": 2.4,
+          "winRate": 51.5,
+          "showRate": 2.5,
           "banRate": 0.7
         },
         {
           "name": "刘备",
           "heroId": 170,
           "tRank": "T3",
-          "winRate": 53.1,
+          "winRate": 52.9,
           "showRate": 2.4,
           "banRate": 0.2
         },
@@ -1380,24 +1380,32 @@
           "name": "云中君",
           "heroId": 506,
           "tRank": "T3",
-          "winRate": 53.1,
+          "winRate": 52.9,
           "showRate": 2.3,
-          "banRate": 0.0
+          "banRate": 0.1
         },
         {
           "name": "赵怀真",
           "heroId": 544,
           "tRank": "T3",
-          "winRate": 50.1,
-          "showRate": 2.0,
+          "winRate": 50.3,
+          "showRate": 2.1,
           "banRate": 0.3
         },
         {
           "name": "苍",
           "heroId": 177,
           "tRank": "T3",
-          "winRate": 47.4,
-          "showRate": 1.7,
+          "winRate": 48.2,
+          "showRate": 1.8,
+          "banRate": 0.1
+        },
+        {
+          "name": "露娜",
+          "heroId": 146,
+          "tRank": "T3",
+          "winRate": 43.5,
+          "showRate": 1.5,
           "banRate": 0.1
         },
         {
@@ -1405,22 +1413,14 @@
           "heroId": 183,
           "tRank": "T3",
           "winRate": 57.1,
-          "showRate": 1.5,
-          "banRate": 0.0
-        },
-        {
-          "name": "露娜",
-          "heroId": 146,
-          "tRank": "T3",
-          "winRate": 44.2,
           "showRate": 1.4,
-          "banRate": 0.1
+          "banRate": 0.0
         },
         {
           "name": "梦奇",
           "heroId": 198,
           "tRank": "T3",
-          "winRate": 53.0,
+          "winRate": 51.1,
           "showRate": 0.8,
           "banRate": 0.1
         }
@@ -1432,518 +1432,17 @@
       "counter": [
         [
           "孙策",
-          4.0,
+          4.2,
           1
         ],
         [
-          "米莱狄",
+          "盾山",
           3.7,
           1
         ],
         [
           "刘禅",
-          3.7,
-          1
-        ],
-        [
-          "李信",
-          0,
-          3
-        ],
-        [
-          "老夫子",
-          0,
-          3
-        ],
-        [
-          "盘古",
-          0,
-          3
-        ]
-      ],
-      "tRanks": {
-        "1": "T1",
-        "4": "T1"
-      }
-    },
-    "小乔": {
-      "counter": [
-        [
-          "公孙离",
-          5.3,
-          1
-        ],
-        [
-          "芈月",
-          4.4,
-          1
-        ],
-        [
-          "杨玉环",
-          3.0,
-          1
-        ],
-        [
-          "阿古朵",
-          0,
-          3
-        ],
-        [
-          "狄仁杰",
-          0,
-          3
-        ],
-        [
-          "姜子牙",
-          0,
-          3
-        ]
-      ],
-      "tRanks": {
-        "2": "T1"
-      }
-    },
-    "赵云": {
-      "counter": [
-        [
-          "盘古",
-          3.4,
-          1
-        ],
-        [
-          "芈月",
-          2.2,
-          1
-        ],
-        [
-          "公孙离",
-          2.1,
-          1
-        ],
-        [
-          "海诺",
-          0,
-          3
-        ],
-        [
-          "铠",
-          0,
-          3
-        ],
-        [
-          "刘备",
-          0,
-          3
-        ]
-      ],
-      "tRanks": {
-        "5": "T1"
-      }
-    },
-    "墨子": {
-      "counter": [
-        [
-          "孙悟空",
-          2.7,
-          1
-        ],
-        [
-          "海月",
-          2.7,
-          1
-        ],
-        [
-          "姜子牙",
-          2.6,
-          1
-        ],
-        [
-          "阿古朵",
-          0,
-          3
-        ],
-        [
-          "狄仁杰",
-          0,
-          3
-        ],
-        [
-          "哪吒",
-          0,
-          3
-        ]
-      ],
-      "tRanks": {
-        "2": "T1",
-        "4": "T1"
-      }
-    },
-    "妲己": {
-      "counter": [
-        [
-          "露娜",
-          6.6,
-          1
-        ],
-        [
-          "高渐离",
-          6.4,
-          1
-        ],
-        [
-          "蚩奼",
-          6.1,
-          1
-        ],
-        [
-          "暃",
-          5.3,
-          2
-        ],
-        [
-          "曜",
-          4.5,
-          2
-        ],
-        [
-          "阿古朵",
-          0,
-          3
-        ]
-      ],
-      "tRanks": {
-        "2": "T1"
-      }
-    },
-    "嬴政": {
-      "counter": [
-        [
-          "鲁班七号",
-          3.8,
-          1
-        ],
-        [
-          "廉颇",
           3.6,
-          1
-        ],
-        [
-          "哪吒",
-          3.6,
-          1
-        ],
-        [
-          "阿古朵",
-          0,
-          3
-        ],
-        [
-          "狄仁杰",
-          0,
-          3
-        ],
-        [
-          "姜子牙",
-          0,
-          3
-        ]
-      ],
-      "tRanks": {
-        "2": "T3"
-      }
-    },
-    "孙尚香": {
-      "counter": [
-        [
-          "铠",
-          4.5,
-          1
-        ],
-        [
-          "蒙犽",
-          3.3,
-          1
-        ],
-        [
-          "元流之子(射手)",
-          2.3,
-          1
-        ],
-        [
-          "阿古朵",
-          0,
-          3
-        ],
-        [
-          "嫦娥",
-          0,
-          3
-        ],
-        [
-          "马可波罗",
-          0,
-          3
-        ]
-      ],
-      "tRanks": {
-        "3": "T2"
-      }
-    },
-    "鲁班七号": {
-      "counter": [
-        [
-          "盾山",
-          6.8,
-          1
-        ],
-        [
-          "嫦娥",
-          4.7,
-          1
-        ],
-        [
-          "老夫子",
-          4.6,
-          1
-        ],
-        [
-          "阿古朵",
-          0,
-          3
-        ],
-        [
-          "马可波罗",
-          0,
-          3
-        ],
-        [
-          "刘备",
-          0,
-          3
-        ]
-      ],
-      "tRanks": {
-        "3": "T2"
-      }
-    },
-    "庄周": {
-      "counter": [
-        [
-          "鲁班大师",
-          11.1,
-          1
-        ],
-        [
-          "鬼谷子",
-          10.6,
-          1
-        ],
-        [
-          "孙策",
-          9.8,
-          1
-        ],
-        [
-          "钟馗",
-          9.2,
-          2
-        ],
-        [
-          "白起",
-          7.9,
-          2
-        ],
-        [
-          "苏烈",
-          6.4,
-          2
-        ],
-        [
-          "达摩",
-          6.2,
-          2
-        ],
-        [
-          "后羿",
-          5.5,
-          2
-        ],
-        [
-          "牛魔",
-          5.3,
-          2
-        ],
-        [
-          "西施",
-          5.1,
-          2
-        ],
-        [
-          "廉颇",
-          4.5,
-          2
-        ],
-        [
-          "王昭君",
-          4.3,
-          2
-        ],
-        [
-          "武则天",
-          4.1,
-          2
-        ],
-        [
-          "刘禅",
-          4.0,
-          2
-        ],
-        [
-          "云缨",
-          3.7,
-          2
-        ],
-        [
-          "太乙真人",
-          3.3,
-          2
-        ],
-        [
-          "项羽",
-          2.7,
-          2
-        ]
-      ],
-      "tRanks": {
-        "4": "T2"
-      }
-    },
-    "刘禅": {
-      "counter": [
-        [
-          "盾山",
-          7.5,
-          1
-        ],
-        [
-          "大禹",
-          7.4,
-          1
-        ],
-        [
-          "老夫子",
-          6.5,
-          1
-        ],
-        [
-          "孙悟空",
-          4.1,
-          2
-        ],
-        [
-          "孙膑",
-          2.6,
-          2
-        ],
-        [
-          "阿轲",
-          0,
-          3
-        ]
-      ],
-      "tRanks": {
-        "4": "T3"
-      }
-    },
-    "高渐离": {
-      "counter": [
-        [
-          "空空儿",
-          12.5,
-          1
-        ],
-        [
-          "米莱狄",
-          6.4,
-          1
-        ],
-        [
-          "蒙恬",
-          5.0,
-          1
-        ],
-        [
-          "阿古朵",
-          0,
-          3
-        ],
-        [
-          "狄仁杰",
-          0,
-          3
-        ],
-        [
-          "姜子牙",
-          0,
-          3
-        ]
-      ],
-      "tRanks": {
-        "2": "T3"
-      }
-    },
-    "阿轲": {
-      "counter": [
-        [
-          "伽罗",
-          7.1,
-          1
-        ],
-        [
-          "铠",
-          6.2,
-          1
-        ],
-        [
-          "刘备",
-          4.6,
-          1
-        ],
-        [
-          "海诺",
-          0,
-          3
-        ],
-        [
-          "盘古",
-          0,
-          3
-        ],
-        [
-          "马超",
-          0,
-          3
-        ]
-      ],
-      "tRanks": {
-        "5": "T3"
-      }
-    },
-    "钟无艳": {
-      "counter": [
-        [
-          "盘古",
-          4.9,
-          1
-        ],
-        [
-          "芈月",
-          4.3,
-          1
-        ],
-        [
-          "达摩",
-          4.1,
           1
         ],
         [
@@ -1963,6 +1462,487 @@
         ]
       ],
       "tRanks": {
+        "1": "T1",
+        "4": "T1"
+      }
+    },
+    "小乔": {
+      "counter": [
+        [
+          "公孙离",
+          5.3,
+          1
+        ],
+        [
+          "芈月",
+          4.5,
+          1
+        ],
+        [
+          "阿古朵",
+          0,
+          3
+        ],
+        [
+          "姜子牙",
+          0,
+          3
+        ],
+        [
+          "干将莫邪",
+          0,
+          3
+        ],
+        [
+          "哪吒",
+          0,
+          3
+        ]
+      ],
+      "tRanks": {
+        "2": "T0"
+      }
+    },
+    "赵云": {
+      "counter": [
+        [
+          "盘古",
+          3.5,
+          1
+        ],
+        [
+          "元流之子(法师)",
+          2.5,
+          1
+        ],
+        [
+          "芈月",
+          2.1,
+          1
+        ],
+        [
+          "铠",
+          0,
+          3
+        ],
+        [
+          "海诺",
+          0,
+          3
+        ],
+        [
+          "伽罗",
+          0,
+          3
+        ]
+      ],
+      "tRanks": {
+        "5": "T1"
+      }
+    },
+    "墨子": {
+      "counter": [
+        [
+          "姜子牙",
+          2.8,
+          1
+        ],
+        [
+          "孙悟空",
+          2.7,
+          1
+        ],
+        [
+          "干将莫邪",
+          2.5,
+          1
+        ],
+        [
+          "阿古朵",
+          0,
+          3
+        ],
+        [
+          "哪吒",
+          0,
+          3
+        ],
+        [
+          "公孙离",
+          0,
+          3
+        ]
+      ],
+      "tRanks": {
+        "2": "T1",
+        "4": "T1"
+      }
+    },
+    "妲己": {
+      "counter": [
+        [
+          "高渐离",
+          6.4,
+          1
+        ],
+        [
+          "露娜",
+          6.4,
+          1
+        ],
+        [
+          "蚩奼",
+          6.2,
+          1
+        ],
+        [
+          "暃",
+          5.4,
+          2
+        ],
+        [
+          "阿古朵",
+          0,
+          3
+        ],
+        [
+          "哪吒",
+          0,
+          3
+        ]
+      ],
+      "tRanks": {
+        "2": "T1"
+      }
+    },
+    "嬴政": {
+      "counter": [
+        [
+          "哪吒",
+          3.9,
+          1
+        ],
+        [
+          "廉颇",
+          3.7,
+          1
+        ],
+        [
+          "鲁班七号",
+          3.3,
+          1
+        ],
+        [
+          "阿古朵",
+          0,
+          3
+        ],
+        [
+          "公孙离",
+          0,
+          3
+        ],
+        [
+          "姜子牙",
+          0,
+          3
+        ]
+      ],
+      "tRanks": {
+        "2": "T3"
+      }
+    },
+    "孙尚香": {
+      "counter": [
+        [
+          "铠",
+          4.6,
+          1
+        ],
+        [
+          "蒙犽",
+          3.1,
+          1
+        ],
+        [
+          "雅典娜",
+          2.7,
+          1
+        ],
+        [
+          "刘备",
+          0,
+          3
+        ],
+        [
+          "马可波罗",
+          0,
+          3
+        ],
+        [
+          "阿古朵",
+          0,
+          3
+        ]
+      ],
+      "tRanks": {
+        "3": "T2"
+      }
+    },
+    "鲁班七号": {
+      "counter": [
+        [
+          "盾山",
+          6.7,
+          1
+        ],
+        [
+          "老夫子",
+          4.8,
+          1
+        ],
+        [
+          "刘邦",
+          3.7,
+          2
+        ],
+        [
+          "刘备",
+          0,
+          3
+        ],
+        [
+          "马可波罗",
+          0,
+          3
+        ],
+        [
+          "阿古朵",
+          0,
+          3
+        ]
+      ],
+      "tRanks": {
+        "3": "T2"
+      }
+    },
+    "庄周": {
+      "counter": [
+        [
+          "鬼谷子",
+          10.7,
+          1
+        ],
+        [
+          "孙策",
+          10.0,
+          1
+        ],
+        [
+          "钟馗",
+          9.4,
+          1
+        ],
+        [
+          "白起",
+          8.2,
+          2
+        ],
+        [
+          "鲁班大师",
+          7.3,
+          2
+        ],
+        [
+          "苏烈",
+          7.0,
+          2
+        ],
+        [
+          "后羿",
+          5.5,
+          2
+        ],
+        [
+          "牛魔",
+          5.4,
+          2
+        ],
+        [
+          "达摩",
+          4.7,
+          2
+        ],
+        [
+          "廉颇",
+          4.5,
+          2
+        ],
+        [
+          "太乙真人",
+          4.4,
+          2
+        ],
+        [
+          "刘禅",
+          4.0,
+          2
+        ],
+        [
+          "项羽",
+          2.6,
+          2
+        ]
+      ],
+      "tRanks": {
+        "4": "T2"
+      }
+    },
+    "刘禅": {
+      "counter": [
+        [
+          "盾山",
+          8.1,
+          1
+        ],
+        [
+          "老夫子",
+          7.2,
+          1
+        ],
+        [
+          "大禹",
+          6.5,
+          1
+        ],
+        [
+          "孙悟空",
+          4.0,
+          2
+        ],
+        [
+          "庄周",
+          0,
+          3
+        ],
+        [
+          "元流之子(射手)",
+          0,
+          3
+        ]
+      ],
+      "tRanks": {
+        "4": "T3"
+      }
+    },
+    "高渐离": {
+      "counter": [
+        [
+          "空空儿",
+          12.3,
+          1
+        ],
+        [
+          "米莱狄",
+          6.6,
+          1
+        ],
+        [
+          "阿古朵",
+          0,
+          3
+        ],
+        [
+          "哪吒",
+          0,
+          3
+        ],
+        [
+          "公孙离",
+          0,
+          3
+        ],
+        [
+          "姜子牙",
+          0,
+          3
+        ]
+      ],
+      "tRanks": {
+        "2": "T3"
+      }
+    },
+    "阿轲": {
+      "counter": [
+        [
+          "伽罗",
+          7.4,
+          1
+        ],
+        [
+          "铠",
+          6.3,
+          1
+        ],
+        [
+          "雅典娜",
+          4.1,
+          1
+        ],
+        [
+          "海诺",
+          0,
+          3
+        ],
+        [
+          "盘古",
+          0,
+          3
+        ],
+        [
+          "元流之子(法师)",
+          0,
+          3
+        ]
+      ],
+      "tRanks": {
+        "5": "T3"
+      }
+    },
+    "钟无艳": {
+      "counter": [
+        [
+          "盘古",
+          4.7,
+          1
+        ],
+        [
+          "芈月",
+          4.3,
+          1
+        ],
+        [
+          "李信",
+          0,
+          3
+        ],
+        [
+          "老夫子",
+          0,
+          3
+        ],
+        [
+          "司马懿",
+          0,
+          3
+        ],
+        [
+          "哪吒",
+          0,
+          3
+        ]
+      ],
+      "tRanks": {
         "1": "T3",
         "5": "T3"
       }
@@ -1975,19 +1955,14 @@
           1
         ],
         [
-          "亚连",
-          3.0,
-          1
-        ],
-        [
           "元流之子(射手)",
-          2.9,
+          2.7,
           1
         ],
         [
-          "阿轲",
-          0,
-          3
+          "弈星",
+          2.3,
+          1
         ],
         [
           "庄周",
@@ -1995,7 +1970,12 @@
           3
         ],
         [
-          "鬼谷子",
+          "明世隐",
+          0,
+          3
+        ],
+        [
+          "黄忠",
           0,
           3
         ]
@@ -2013,13 +1993,18 @@
         ],
         [
           "雅典娜",
-          6.8,
+          7.1,
           1
         ],
         [
           "庄周",
-          6.4,
+          6.7,
           1
+        ],
+        [
+          "嫦娥",
+          6.3,
+          2
         ],
         [
           "诸葛亮",
@@ -2027,43 +2012,23 @@
           2
         ],
         [
-          "嫦娥",
-          5.7,
-          2
-        ],
-        [
           "杨戬",
-          5.4,
-          2
-        ],
-        [
-          "百里守约",
-          5.3,
-          2
-        ],
-        [
-          "赵怀真",
-          5.1,
+          5.9,
           2
         ],
         [
           "张飞",
-          4.8,
+          5.2,
           2
         ],
         [
           "金蝉",
-          4.7,
+          5.0,
           2
         ],
         [
           "元流之子(坦克)",
-          4.6,
-          2
-        ],
-        [
-          "太乙真人",
-          3.8,
+          4.3,
           2
         ]
       ],
@@ -2075,33 +2040,33 @@
       "counter": [
         [
           "程咬金",
-          8.4,
+          8.6,
           1
         ],
         [
           "妲己",
-          5.2,
+          5.1,
           1
         ],
         [
           "夏洛特",
-          4.8,
-          1
-        ],
-        [
-          "桑启",
-          3.7,
-          2
-        ],
-        [
-          "亚瑟",
-          3.6,
+          4.3,
           2
         ],
         [
           "小乔",
-          2.3,
+          2.5,
           2
+        ],
+        [
+          "李信",
+          0,
+          3
+        ],
+        [
+          "老夫子",
+          0,
+          3
         ]
       ],
       "tRanks": {
@@ -2112,12 +2077,12 @@
       "counter": [
         [
           "哪吒",
-          6.0,
+          6.2,
           1
         ],
         [
           "扁鹊",
-          5.8,
+          5.5,
           1
         ],
         [
@@ -2131,12 +2096,12 @@
           2
         ],
         [
-          "周瑜",
-          3.8,
-          2
+          "老夫子",
+          0,
+          3
         ],
         [
-          "老夫子",
+          "司马懿",
           0,
           3
         ]
@@ -2150,12 +2115,12 @@
       "counter": [
         [
           "梦奇",
-          13.7,
+          13.8,
           1
         ],
         [
           "白起",
-          6.7,
+          6.4,
           1
         ],
         [
@@ -2164,23 +2129,28 @@
           1
         ],
         [
-          "元流之子(坦克)",
+          "钟无艳",
           6.2,
           2
         ],
         [
-          "钟无艳",
+          "牛魔",
           6.1,
           2
         ],
         [
-          "牛魔",
-          6.0,
+          "元流之子(坦克)",
+          6.1,
           2
         ],
         [
           "宫本武藏",
-          5.5,
+          5.3,
+          2
+        ],
+        [
+          "赵怀真",
+          4.7,
           2
         ],
         [
@@ -2189,13 +2159,13 @@
           2
         ],
         [
-          "张飞",
+          "狂铁",
           4.2,
           2
         ],
         [
-          "狂铁",
-          4.2,
+          "张飞",
+          4.1,
           2
         ]
       ],
@@ -2206,32 +2176,32 @@
     "周瑜": {
       "counter": [
         [
-          "盾山",
-          6.2,
-          1
-        ],
-        [
           "阿古朵",
-          5.4,
-          1
-        ],
-        [
-          "宫本武藏",
-          5.0,
+          5.3,
           1
         ],
         [
           "赵怀真",
-          4.7,
+          5.2,
+          1
+        ],
+        [
+          "宫本武藏",
+          5.1,
+          1
+        ],
+        [
+          "苏烈",
+          3.8,
           2
         ],
         [
-          "狄仁杰",
+          "哪吒",
           0,
           3
         ],
         [
-          "姜子牙",
+          "公孙离",
           0,
           3
         ]
@@ -2244,17 +2214,17 @@
       "counter": [
         [
           "海月",
-          6.4,
+          6.8,
           1
         ],
         [
           "嫦娥",
-          5.5,
+          5.3,
           1
         ],
         [
           "老夫子",
-          5.2,
+          5.0,
           1
         ],
         [
@@ -2263,12 +2233,12 @@
           2
         ],
         [
-          "东皇太一",
-          4.1,
-          2
+          "李信",
+          0,
+          3
         ],
         [
-          "李信",
+          "司马懿",
           0,
           3
         ]
@@ -2293,21 +2263,21 @@
         ],
         [
           "鲁班大师",
-          4.5,
+          4.0,
           1
         ],
         [
-          "元流之子(坦克)",
-          3.8,
-          2
-        ],
-        [
-          "朵莉亚",
-          1.8,
-          2
-        ],
-        [
           "阿古朵",
+          0,
+          3
+        ],
+        [
+          "哪吒",
+          0,
+          3
+        ],
+        [
+          "公孙离",
           0,
           3
         ]
@@ -2324,13 +2294,13 @@
           1
         ],
         [
-          "花木兰",
-          2.6,
+          "貂蝉",
+          2.4,
           1
         ],
         [
-          "貂蝉",
-          2.4,
+          "花木兰",
+          2.3,
           1
         ],
         [
@@ -2344,7 +2314,7 @@
           3
         ],
         [
-          "盘古",
+          "司马懿",
           0,
           3
         ]
@@ -2358,37 +2328,37 @@
       "counter": [
         [
           "盾山",
-          8.8,
+          8.7,
+          1
+        ],
+        [
+          "嫦娥",
+          6.0,
           1
         ],
         [
           "宫本武藏",
-          5.6,
-          1
-        ],
-        [
-          "马超",
-          5.6,
-          1
+          5.7,
+          2
         ],
         [
           "狂铁",
-          4.8,
+          4.9,
+          2
+        ],
+        [
+          "赵怀真",
+          4.9,
           2
         ],
         [
           "亚瑟",
-          3.9,
-          2
-        ],
-        [
-          "苏烈",
-          3.8,
+          4.1,
           2
         ],
         [
           "元流之子(刺客)",
-          2.8,
+          3.3,
           2
         ]
       ],
@@ -2400,12 +2370,12 @@
       "counter": [
         [
           "程咬金",
-          8.6,
+          8.7,
           1
         ],
         [
           "蔡文姬",
-          6.4,
+          6.5,
           1
         ],
         [
@@ -2414,29 +2384,19 @@
           1
         ],
         [
-          "诸葛亮",
-          5.2,
-          2
-        ],
-        [
-          "西施",
-          5.1,
+          "海诺",
+          4.7,
           2
         ],
         [
           "李元芳",
-          4.5,
+          4.6,
           2
         ],
         [
-          "海诺",
-          4.5,
-          2
-        ],
-        [
-          "曹操",
-          2.6,
-          2
+          "盘古",
+          0,
+          3
         ]
       ],
       "tRanks": {
@@ -2447,23 +2407,23 @@
       "counter": [
         [
           "甄姬",
-          6.0,
+          6.1,
           1
         ],
         [
-          "姜子牙",
-          4.5,
-          1
-        ],
-        [
-          "吕布",
-          4.5,
+          "鬼谷子",
+          4.9,
           1
         ],
         [
           "娜可露露",
-          3.9,
+          4.0,
           2
+        ],
+        [
+          "盘古",
+          0,
+          3
         ],
         [
           "海诺",
@@ -2471,7 +2431,7 @@
           3
         ],
         [
-          "盘古",
+          "元流之子(法师)",
           0,
           3
         ]
@@ -2484,23 +2444,23 @@
       "counter": [
         [
           "黄忠",
-          6.0,
+          5.9,
           1
         ],
         [
-          "明世隐",
-          4.9,
+          "亚连",
+          5.6,
           1
         ],
         [
           "程咬金",
-          4.8,
-          1
+          5.2,
+          2
         ],
         [
-          "蒙犽",
-          3.4,
-          2
+          "刘备",
+          0,
+          3
         ],
         [
           "阿古朵",
@@ -2508,7 +2468,7 @@
           3
         ],
         [
-          "嫦娥",
+          "铠",
           0,
           3
         ]
@@ -2521,7 +2481,7 @@
       "counter": [
         [
           "鲁班大师",
-          8.9,
+          7.9,
           1
         ],
         [
@@ -2531,16 +2491,16 @@
         ],
         [
           "白起",
-          6.3,
+          6.4,
           1
         ],
         [
-          "阿古朵",
+          "刘备",
           0,
           3
         ],
         [
-          "嫦娥",
+          "阿古朵",
           0,
           3
         ],
@@ -2558,17 +2518,17 @@
       "counter": [
         [
           "芈月",
-          5.9,
+          4.8,
           1
         ],
         [
           "司马懿",
-          4.3,
+          4.0,
           1
         ],
         [
-          "盘古",
-          3.8,
+          "貂蝉",
+          3.9,
           1
         ],
         [
@@ -2582,7 +2542,7 @@
           3
         ],
         [
-          "牛魔",
+          "哪吒",
           0,
           3
         ]
@@ -2595,23 +2555,18 @@
       "counter": [
         [
           "老夫子",
-          5.0,
+          4.9,
           1
         ],
         [
           "盘古",
-          4.7,
+          4.2,
           1
         ],
         [
           "盾山",
-          4.5,
+          4.1,
           1
-        ],
-        [
-          "达摩",
-          4.4,
-          2
         ],
         [
           "李信",
@@ -2620,6 +2575,11 @@
         ],
         [
           "司马懿",
+          0,
+          3
+        ],
+        [
+          "哪吒",
           0,
           3
         ]
@@ -2633,17 +2593,12 @@
       "counter": [
         [
           "鬼谷子",
-          6.8,
-          1
-        ],
-        [
-          "鲁班大师",
-          5.1,
+          5.5,
           1
         ],
         [
           "张良",
-          5.1,
+          5.2,
           1
         ],
         [
@@ -2652,7 +2607,12 @@
           3
         ],
         [
-          "狄仁杰",
+          "哪吒",
+          0,
+          3
+        ],
+        [
+          "公孙离",
           0,
           3
         ],
@@ -2663,29 +2623,29 @@
         ]
       ],
       "tRanks": {
-        "2": "T2"
+        "2": "T3"
       }
     },
     "老夫子": {
       "counter": [
         [
-          "高渐离",
+          "嫦娥",
           6.0,
           1
         ],
         [
-          "戈娅",
+          "高渐离",
           5.9,
           1
         ],
         [
-          "嫦娥",
-          5.7,
+          "戈娅",
+          5.6,
           1
         ],
         [
-          "司空震",
-          5.3,
+          "嬴政",
+          5.1,
           2
         ],
         [
@@ -2694,18 +2654,13 @@
           2
         ],
         [
-          "嬴政",
-          5.0,
-          2
-        ],
-        [
-          "影",
-          4.4,
+          "杨玉环",
+          4.6,
           2
         ],
         [
           "裴擒虎",
-          3.9,
+          4.3,
           2
         ]
       ],
@@ -2716,23 +2671,23 @@
     "关羽": {
       "counter": [
         [
-          "芈月",
-          7.8,
-          1
-        ],
-        [
           "阿古朵",
-          7.4,
+          7.5,
           1
         ],
         [
-          "蔡文姬",
-          5.4,
+          "芈月",
+          7.3,
           1
         ],
         [
           "大乔",
-          4.4,
+          4.3,
+          2
+        ],
+        [
+          "蒙犽",
+          3.5,
           2
         ],
         [
@@ -2763,7 +2718,7 @@
           1
         ],
         [
-          "牛魔",
+          "哪吒",
           5.3,
           1
         ],
@@ -2778,7 +2733,7 @@
           3
         ],
         [
-          "盘古",
+          "司马懿",
           0,
           3
         ]
@@ -2792,7 +2747,7 @@
       "counter": [
         [
           "鲁班七号",
-          4.0,
+          4.1,
           1
         ],
         [
@@ -2811,12 +2766,12 @@
           3
         ],
         [
-          "狄仁杰",
+          "哪吒",
           0,
           3
         ],
         [
-          "姜子牙",
+          "公孙离",
           0,
           3
         ]
@@ -2828,32 +2783,32 @@
     "程咬金": {
       "counter": [
         [
-          "百里守约",
-          4.7,
-          1
-        ],
-        [
           "曹操",
-          4.2,
-          1
-        ],
-        [
-          "刘备",
-          4.1,
+          4.4,
           1
         ],
         [
           "李元芳",
-          4.1,
-          2
+          4.2,
+          1
         ],
         [
           "小乔",
-          2.3,
+          2.1,
           2
         ],
         [
           "李信",
+          0,
+          3
+        ],
+        [
+          "老夫子",
+          0,
+          3
+        ],
+        [
+          "司马懿",
           0,
           3
         ]
@@ -2866,38 +2821,33 @@
       "counter": [
         [
           "空空儿",
-          7.6,
+          8.5,
           1
         ],
         [
           "蒙恬",
-          7.0,
-          1
-        ],
-        [
-          "马超",
-          6.5,
+          6.7,
           1
         ],
         [
           "元流之子(法师)",
-          5.6,
-          2
+          6.2,
+          1
         ],
         [
-          "刘邦",
-          5.2,
-          2
-        ],
-        [
-          "猪八戒",
-          5.1,
+          "马超",
+          5.9,
           2
         ],
         [
           "弈星",
-          4.9,
+          4.8,
           2
+        ],
+        [
+          "盘古",
+          0,
+          3
         ]
       ],
       "tRanks": {
@@ -2913,26 +2863,26 @@
         ],
         [
           "大禹",
-          4.5,
-          1
-        ],
-        [
-          "蒙恬",
-          3.7,
+          4.4,
           1
         ],
         [
           "阿古朵",
-          0,
-          3
-        ],
-        [
-          "狄仁杰",
-          0,
-          3
+          4.0,
+          1
         ],
         [
           "哪吒",
+          0,
+          3
+        ],
+        [
+          "公孙离",
+          0,
+          3
+        ],
+        [
+          "干将莫邪",
           0,
           3
         ]
@@ -2946,17 +2896,12 @@
       "counter": [
         [
           "上官婉儿",
-          3.8,
+          4.8,
           1
         ],
         [
           "李信",
-          3.2,
-          1
-        ],
-        [
-          "司马懿",
-          3.1,
+          3.0,
           1
         ],
         [
@@ -2965,12 +2910,17 @@
           3
         ],
         [
-          "盘古",
+          "司马懿",
           0,
           3
         ],
         [
-          "牛魔",
+          "哪吒",
+          0,
+          3
+        ],
+        [
+          "盘古",
           0,
           3
         ]
@@ -2984,23 +2934,18 @@
       "counter": [
         [
           "甄姬",
-          4.0,
+          4.1,
           1
         ],
         [
           "西施",
-          3.7,
+          3.8,
           1
         ],
         [
           "李白",
-          3.7,
+          3.6,
           1
-        ],
-        [
-          "海诺",
-          0,
-          3
         ],
         [
           "盘古",
@@ -3008,7 +2953,12 @@
           3
         ],
         [
-          "铠",
+          "海诺",
+          0,
+          3
+        ],
+        [
+          "元流之子(法师)",
           0,
           3
         ]
@@ -3026,12 +2976,12 @@
         ],
         [
           "扁鹊",
-          5.2,
+          5.4,
           1
         ],
         [
-          "明世隐",
-          3.9,
+          "夏侯惇",
+          4.0,
           1
         ],
         [
@@ -3040,12 +2990,12 @@
           3
         ],
         [
-          "狄仁杰",
+          "哪吒",
           0,
           3
         ],
         [
-          "姜子牙",
+          "公孙离",
           0,
           3
         ]
@@ -3063,23 +3013,23 @@
           1
         ],
         [
-          "盘古",
+          "铠",
           5.3,
           1
         ],
         [
-          "蒙犽",
-          5.0,
+          "盘古",
+          4.8,
           1
         ],
         [
-          "铠",
-          4.9,
+          "莱西奥",
+          4.0,
           2
         ],
         [
-          "莱西奥",
-          3.7,
+          "蒙犽",
+          3.5,
           2
         ],
         [
@@ -3096,21 +3046,16 @@
       "counter": [
         [
           "王昭君",
-          4.4,
+          4.7,
           1
         ],
         [
           "老夫子",
-          4.3,
+          3.8,
           1
         ],
         [
           "李信",
-          2.7,
-          1
-        ],
-        [
-          "盘古",
           0,
           3
         ],
@@ -3120,7 +3065,12 @@
           3
         ],
         [
-          "牛魔",
+          "哪吒",
+          0,
+          3
+        ],
+        [
+          "盘古",
           0,
           3
         ]
@@ -3133,7 +3083,7 @@
       "counter": [
         [
           "上官婉儿",
-          7.8,
+          7.7,
           1
         ],
         [
@@ -3143,12 +3093,12 @@
         ],
         [
           "李白",
-          6.0,
+          5.9,
           1
         ],
         [
-          "花木兰",
-          3.9,
+          "公孙离",
+          5.4,
           2
         ],
         [
@@ -3157,7 +3107,7 @@
           3
         ],
         [
-          "狄仁杰",
+          "哪吒",
           0,
           3
         ]
@@ -3170,34 +3120,34 @@
     "不知火舞": {
       "counter": [
         [
-          "关羽",
-          5.9,
-          1
-        ],
-        [
           "女娲",
-          5.4,
+          5.7,
           1
         ],
         [
           "西施",
-          4.9,
+          5.2,
           1
         ],
         [
           "姜子牙",
-          4.7,
+          5.0,
           2
         ],
         [
-          "大乔",
-          3.7,
+          "干将莫邪",
+          4.4,
           2
         ],
         [
-          "安琪拉",
-          3.6,
-          2
+          "阿古朵",
+          0,
+          3
+        ],
+        [
+          "哪吒",
+          0,
+          3
         ]
       ],
       "tRanks": {
@@ -3208,17 +3158,17 @@
       "counter": [
         [
           "刘备",
-          5.2,
+          3.7,
           1
         ],
         [
           "铠",
-          3.6,
+          3.5,
           1
         ],
         [
-          "海诺",
-          2.8,
+          "猪八戒",
+          3.4,
           1
         ],
         [
@@ -3227,12 +3177,12 @@
           3
         ],
         [
-          "马超",
+          "海诺",
           0,
           3
         ],
         [
-          "弈星",
+          "元流之子(法师)",
           0,
           3
         ]
@@ -3250,11 +3200,11 @@
         ],
         [
           "李信",
-          3.3,
+          3.6,
           1
         ],
         [
-          "貂蝉",
+          "刘备",
           3.0,
           1
         ],
@@ -3269,7 +3219,7 @@
           3
         ],
         [
-          "牛魔",
+          "哪吒",
           0,
           3
         ]
@@ -3282,48 +3232,43 @@
     "亚瑟": {
       "counter": [
         [
-          "公孙离",
-          6.8,
-          1
-        ],
-        [
           "不知火舞",
-          6.5,
+          7.9,
           1
         ],
         [
-          "镜",
-          6.4,
+          "公孙离",
+          7.2,
           1
-        ],
-        [
-          "姬小满",
-          6.4,
-          2
         ],
         [
           "夏洛特",
+          6.9,
+          1
+        ],
+        [
+          "沈梦溪",
+          6.3,
+          2
+        ],
+        [
+          "姬小满",
           6.3,
           2
         ],
         [
           "曜",
-          6.0,
+          5.8,
           2
         ],
         [
-          "沈梦溪",
+          "镜",
           5.7,
           2
         ],
         [
-          "海月",
-          5.3,
-          2
-        ],
-        [
           "貂蝉",
-          5.1,
+          5.3,
           2
         ],
         [
@@ -3333,7 +3278,7 @@
         ],
         [
           "杨玉环",
-          4.9,
+          5.1,
           2
         ],
         [
@@ -3343,12 +3288,12 @@
         ],
         [
           "花木兰",
-          4.6,
+          4.2,
           2
         ],
         [
           "曹操",
-          3.0,
+          3.5,
           2
         ]
       ],
@@ -3361,33 +3306,33 @@
       "counter": [
         [
           "司马懿",
-          5.2,
-          1
-        ],
-        [
-          "哪吒",
-          4.9,
+          5.4,
           1
         ],
         [
           "芈月",
-          4.8,
+          5.1,
+          1
+        ],
+        [
+          "哪吒",
+          5.0,
           1
         ],
         [
           "娜可露露",
-          4.7,
-          2
-        ],
-        [
-          "露娜",
-          4.3,
+          4.5,
           2
         ],
         [
           "海诺",
-          4.3,
+          4.1,
           2
+        ],
+        [
+          "盘古",
+          0,
+          3
         ]
       ],
       "tRanks": {
@@ -3398,31 +3343,31 @@
       "counter": [
         [
           "孙策",
-          4.8,
+          4.9,
           1
         ],
         [
           "后羿",
-          4.5,
+          4.7,
           1
         ],
         [
-          "蔡文姬",
-          4.3,
-          1
-        ],
-        [
-          "钟无艳",
-          3.0,
+          "太乙真人",
+          4.7,
           2
         ],
         [
-          "阿轲",
+          "钟无艳",
+          2.8,
+          2
+        ],
+        [
+          "庄周",
           0,
           3
         ],
         [
-          "庄周",
+          "元流之子(射手)",
           0,
           3
         ]
@@ -3434,19 +3379,24 @@
     "后羿": {
       "counter": [
         [
-          "司空震",
-          4.8,
+          "嫦娥",
+          5.3,
           1
         ],
         [
-          "嫦娥",
-          4.8,
+          "司空震",
+          5.1,
           1
         ],
         [
           "裴擒虎",
-          4.1,
+          4.4,
           1
+        ],
+        [
+          "刘备",
+          0,
+          3
         ],
         [
           "阿古朵",
@@ -3455,11 +3405,6 @@
         ],
         [
           "马可波罗",
-          0,
-          3
-        ],
-        [
-          "刘备",
           0,
           3
         ]
@@ -3472,26 +3417,26 @@
       "counter": [
         [
           "司马懿",
-          5.0,
+          5.3,
           1
         ],
         [
           "盘古",
-          4.5,
+          4.0,
           1
         ],
         [
-          "钟馗",
+          "武则天",
           3.9,
           1
         ],
         [
-          "孙悟空",
-          3.7,
-          2
+          "海诺",
+          0,
+          3
         ],
         [
-          "海诺",
+          "元流之子(法师)",
           0,
           3
         ],
@@ -3509,23 +3454,18 @@
       "counter": [
         [
           "司马懿",
-          5.4,
+          5.8,
+          1
+        ],
+        [
+          "猪八戒",
+          3.9,
           1
         ],
         [
           "鲁班大师",
-          4.5,
+          3.4,
           1
-        ],
-        [
-          "上官婉儿",
-          3.5,
-          1
-        ],
-        [
-          "阿轲",
-          0,
-          3
         ],
         [
           "庄周",
@@ -3533,7 +3473,12 @@
           3
         ],
         [
-          "鬼谷子",
+          "元流之子(射手)",
+          0,
+          3
+        ],
+        [
+          "明世隐",
           0,
           3
         ]
@@ -3551,13 +3496,18 @@
         ],
         [
           "兰陵王",
-          4.4,
+          4.6,
           1
         ],
         [
           "嫦娥",
-          4.0,
+          4.5,
           1
+        ],
+        [
+          "刘备",
+          0,
+          3
         ],
         [
           "阿古朵",
@@ -3566,11 +3516,6 @@
         ],
         [
           "马可波罗",
-          0,
-          3
-        ],
-        [
-          "刘备",
           0,
           3
         ]
@@ -3584,17 +3529,17 @@
       "counter": [
         [
           "孙悟空",
-          5.0,
+          4.9,
           1
         ],
         [
           "娜可露露",
-          4.1,
+          3.9,
           1
         ],
         [
           "莱西奥",
-          3.5,
+          3.9,
           1
         ],
         [
@@ -3603,12 +3548,12 @@
           2
         ],
         [
-          "阿古朵",
+          "刘备",
           0,
           3
         ],
         [
-          "马可波罗",
+          "阿古朵",
           0,
           3
         ]
@@ -3626,26 +3571,26 @@
         ],
         [
           "黄忠",
-          7.0,
+          7.2,
           1
         ],
         [
           "扁鹊",
-          5.4,
+          5.3,
           1
         ],
         [
           "孙尚香",
-          2.3,
+          2.0,
           2
         ],
         [
-          "阿轲",
+          "庄周",
           0,
           3
         ],
         [
-          "庄周",
+          "元流之子(射手)",
           0,
           3
         ]
@@ -3663,12 +3608,7 @@
         ],
         [
           "达摩",
-          3.5,
-          1
-        ],
-        [
-          "妲己",
-          3.5,
+          3.6,
           1
         ],
         [
@@ -3682,7 +3622,12 @@
           3
         ],
         [
-          "盘古",
+          "司马懿",
+          0,
+          3
+        ],
+        [
+          "哪吒",
           0,
           3
         ]
@@ -3696,18 +3641,18 @@
       "counter": [
         [
           "戈娅",
-          3.9,
+          4.5,
           1
         ],
         [
-          "弈星",
-          3.4,
+          "云中君",
+          4.0,
           1
         ],
         [
-          "钟馗",
-          3.1,
-          1
+          "盘古",
+          0,
+          3
         ],
         [
           "海诺",
@@ -3715,7 +3660,7 @@
           3
         ],
         [
-          "盘古",
+          "元流之子(法师)",
           0,
           3
         ],
@@ -3732,32 +3677,32 @@
     "蔡文姬": {
       "counter": [
         [
-          "元流之子(辅助)",
-          5.1,
-          1
-        ],
-        [
           "诸葛亮",
-          5.1,
+          5.2,
           1
         ],
         [
-          "嫦娥",
-          4.2,
+          "元流之子(辅助)",
+          4.8,
           1
         ],
         [
-          "杨玉环",
-          3.8,
-          2
+          "明世隐",
+          4.4,
+          1
         ],
         [
-          "阿轲",
+          "庄周",
           0,
           3
         ],
         [
-          "庄周",
+          "元流之子(射手)",
+          0,
+          3
+        ],
+        [
+          "黄忠",
           0,
           3
         ]
@@ -3774,19 +3719,9 @@
           1
         ],
         [
-          "宫本武藏",
-          3.5,
+          "西施",
+          3.8,
           1
-        ],
-        [
-          "安琪拉",
-          3.5,
-          1
-        ],
-        [
-          "阿轲",
-          0,
-          3
         ],
         [
           "庄周",
@@ -3794,7 +3729,17 @@
           3
         ],
         [
-          "鬼谷子",
+          "元流之子(射手)",
+          0,
+          3
+        ],
+        [
+          "明世隐",
+          0,
+          3
+        ],
+        [
+          "黄忠",
           0,
           3
         ]
@@ -3807,27 +3752,27 @@
       "counter": [
         [
           "兰陵王",
-          5.9,
-          1
-        ],
-        [
-          "庄周",
-          4.9,
+          5.8,
           1
         ],
         [
           "牛魔",
-          4.8,
+          5.1,
+          1
+        ],
+        [
+          "庄周",
+          4.7,
           1
         ],
         [
           "东皇太一",
-          4.2,
+          4.3,
           2
         ],
         [
           "莱西奥",
-          4.1,
+          4.0,
           2
         ],
         [
@@ -3850,17 +3795,17 @@
         ],
         [
           "韩信",
-          5.8,
+          5.7,
           1
         ],
         [
           "马超",
-          5.6,
+          5.3,
           1
         ],
         [
           "太乙真人",
-          5.1,
+          4.9,
           2
         ],
         [
@@ -3869,7 +3814,7 @@
           3
         ],
         [
-          "狄仁杰",
+          "哪吒",
           0,
           3
         ]
@@ -3883,23 +3828,18 @@
       "counter": [
         [
           "金蝉",
-          6.7,
+          6.6,
           1
         ],
         [
           "伽罗",
-          5.1,
+          4.8,
           1
         ],
         [
-          "诸葛亮",
-          4.3,
-          1
-        ],
-        [
-          "艾琳",
-          3.0,
-          2
+          "刘备",
+          0,
+          3
         ],
         [
           "阿古朵",
@@ -3908,6 +3848,11 @@
         ],
         [
           "马可波罗",
+          0,
+          3
+        ],
+        [
+          "铠",
           0,
           3
         ]
@@ -3920,23 +3865,18 @@
       "counter": [
         [
           "阿古朵",
-          5.5,
+          6.0,
           1
         ],
         [
           "狄仁杰",
-          4.9,
+          4.6,
           1
         ],
         [
           "弈星",
-          3.9,
+          4.2,
           1
-        ],
-        [
-          "姜子牙",
-          0,
-          3
         ],
         [
           "哪吒",
@@ -3944,47 +3884,52 @@
           3
         ],
         [
-          "米莱狄",
+          "公孙离",
+          0,
+          3
+        ],
+        [
+          "姜子牙",
           0,
           3
         ]
       ],
       "tRanks": {
-        "2": "T1",
-        "4": "T1"
+        "2": "T0",
+        "4": "T0"
       }
     },
     "东皇太一": {
       "counter": [
         [
-          "姬小满",
-          5.8,
+          "老夫子",
+          6.0,
           1
         ],
         [
           "花木兰",
-          5.7,
+          5.6,
           1
         ],
         [
-          "老夫子",
-          5.1,
+          "姬小满",
+          5.3,
           1
         ],
         [
-          "赵怀真",
-          4.7,
+          "项羽",
+          2.2,
           2
         ],
         [
-          "瑶",
-          3.9,
-          2
+          "李信",
+          0,
+          3
         ],
         [
-          "元流之子(刺客)",
-          2.9,
-          2
+          "司马懿",
+          0,
+          3
         ]
       ],
       "tRanks": {
@@ -3996,26 +3941,26 @@
       "counter": [
         [
           "阿古朵",
-          9.7,
+          10.4,
           1
         ],
         [
           "庄周",
-          5.1,
-          1
-        ],
-        [
-          "伽罗",
-          4.1,
+          5.3,
           1
         ],
         [
           "澜",
-          4.0,
+          4.4,
           2
         ],
         [
-          "狄仁杰",
+          "哪吒",
+          0,
+          3
+        ],
+        [
+          "公孙离",
           0,
           3
         ],
@@ -4033,47 +3978,37 @@
       "counter": [
         [
           "蔡文姬",
-          13.0,
+          12.6,
           1
         ],
         [
           "明世隐",
-          9.7,
+          9.4,
           1
         ],
         [
           "盾山",
-          8.3,
-          1
-        ],
-        [
-          "伽罗",
-          6.6,
-          2
-        ],
-        [
-          "阿轲",
-          6.4,
-          2
-        ],
-        [
-          "兰陵王",
-          6.4,
+          6.8,
           2
         ],
         [
           "扁鹊",
-          6.0,
+          6.7,
+          2
+        ],
+        [
+          "兰陵王",
+          6.7,
+          2
+        ],
+        [
+          "黄忠",
+          5.9,
           2
         ],
         [
           "元流之子(辅助)",
-          6.0,
-          2
-        ],
-        [
-          "宫本武藏",
-          5.0,
+          5.7,
           2
         ],
         [
@@ -4083,7 +4018,7 @@
         ],
         [
           "元流之子(射手)",
-          3.9,
+          4.2,
           2
         ]
       ],
@@ -4095,12 +4030,12 @@
       "counter": [
         [
           "刘备",
-          8.3,
+          8.6,
           1
         ],
         [
           "嫦娥",
-          7.7,
+          7.9,
           1
         ],
         [
@@ -4110,18 +4045,23 @@
         ],
         [
           "云缨",
-          5.1,
+          5.3,
           2
         ],
         [
-          "李信",
-          0,
-          3
+          "海月",
+          5.3,
+          2
         ],
         [
-          "老夫子",
-          0,
-          3
+          "云中君",
+          4.9,
+          2
+        ],
+        [
+          "达摩",
+          4.5,
+          2
         ]
       ],
       "tRanks": {
@@ -4133,18 +4073,23 @@
       "counter": [
         [
           "兰陵王",
-          8.8,
-          1
-        ],
-        [
-          "鬼谷子",
-          5.8,
+          9.7,
           1
         ],
         [
           "阿轲",
-          5.4,
+          6.8,
           1
+        ],
+        [
+          "鬼谷子",
+          6.1,
+          1
+        ],
+        [
+          "刘备",
+          0,
+          3
         ],
         [
           "阿古朵",
@@ -4155,38 +4100,28 @@
           "马可波罗",
           0,
           3
-        ],
-        [
-          "嫦娥",
-          0,
-          3
         ]
       ],
       "tRanks": {
-        "3": "T2"
+        "3": "T1"
       }
     },
     "百里玄策": {
       "counter": [
         [
           "阿轲",
-          8.7,
+          9.0,
           1
         ],
         [
           "嬴政",
-          5.2,
+          5.0,
           1
         ],
         [
           "李信",
-          4.5,
+          4.6,
           1
-        ],
-        [
-          "海诺",
-          0,
-          3
         ],
         [
           "盘古",
@@ -4194,7 +4129,12 @@
           3
         ],
         [
-          "铠",
+          "海诺",
+          0,
+          3
+        ],
+        [
+          "元流之子(法师)",
           0,
           3
         ]
@@ -4206,24 +4146,14 @@
     "苏烈": {
       "counter": [
         [
-          "司马懿",
-          6.0,
-          1
-        ],
-        [
           "盾山",
-          5.8,
+          6.6,
           1
         ],
         [
-          "蔡文姬",
-          4.8,
+          "司马懿",
+          6.3,
           1
-        ],
-        [
-          "刘邦",
-          3.6,
-          2
         ],
         [
           "李信",
@@ -4232,6 +4162,16 @@
         ],
         [
           "老夫子",
+          0,
+          3
+        ],
+        [
+          "哪吒",
+          0,
+          3
+        ],
+        [
+          "盘古",
           0,
           3
         ]
@@ -4245,33 +4185,33 @@
       "counter": [
         [
           "雅典娜",
-          7.5,
+          6.1,
           1
         ],
         [
-          "白起",
-          5.8,
-          1
-        ],
-        [
-          "程咬金",
-          5.5,
+          "宫本武藏",
+          5.3,
           1
         ],
         [
           "猪八戒",
-          4.9,
+          5.3,
+          1
+        ],
+        [
+          "云中君",
+          4.6,
+          2
+        ],
+        [
+          "刘邦",
+          4.4,
           2
         ],
         [
           "孙权",
           4.2,
           2
-        ],
-        [
-          "李信",
-          0,
-          3
         ]
       ],
       "tRanks": {
@@ -4283,23 +4223,13 @@
       "counter": [
         [
           "李白",
-          5.5,
+          5.8,
           1
         ],
         [
           "阿古朵",
-          5.2,
+          5.4,
           1
-        ],
-        [
-          "狄仁杰",
-          3.5,
-          1
-        ],
-        [
-          "姜子牙",
-          0,
-          3
         ],
         [
           "哪吒",
@@ -4307,7 +4237,17 @@
           3
         ],
         [
-          "米莱狄",
+          "公孙离",
+          0,
+          3
+        ],
+        [
+          "姜子牙",
+          0,
+          3
+        ],
+        [
+          "干将莫邪",
           0,
           3
         ]
@@ -4319,28 +4259,23 @@
     "明世隐": {
       "counter": [
         [
-          "公孙离",
-          6.1,
+          "刘备",
+          6.4,
           1
         ],
         [
           "庄周",
-          6.0,
+          6.2,
           1
         ],
         [
-          "刘备",
-          5.2,
+          "公孙离",
+          5.4,
           1
         ],
         [
           "司空震",
-          5.1,
-          2
-        ],
-        [
-          "貂蝉",
-          4.9,
+          5.2,
           2
         ],
         [
@@ -4350,7 +4285,7 @@
         ],
         [
           "敖隐",
-          4.2,
+          4.4,
           2
         ],
         [
@@ -4367,31 +4302,31 @@
       "counter": [
         [
           "上官婉儿",
-          8.9,
+          9.3,
           1
         ],
         [
           "女娲",
-          7.8,
-          1
-        ],
-        [
-          "亚连",
-          7.1,
+          7.6,
           1
         ],
         [
           "干将莫邪",
-          7.1,
+          7.2,
           2
         ],
         [
           "西施",
-          7.1,
+          7.0,
           2
         ],
         [
           "马可波罗",
+          6.3,
+          2
+        ],
+        [
+          "亚连",
           6.3,
           2
         ],
@@ -4402,17 +4337,17 @@
         ],
         [
           "海诺",
-          5.3,
+          5.9,
+          2
+        ],
+        [
+          "武则天",
+          4.0,
           2
         ],
         [
           "大乔",
           4.0,
-          2
-        ],
-        [
-          "武则天",
-          3.3,
           2
         ]
       ],
@@ -4423,18 +4358,18 @@
     "杨玉环": {
       "counter": [
         [
-          "云中君",
-          5.8,
-          1
-        ],
-        [
           "干将莫邪",
           5.0,
           1
         ],
         [
           "哪吒",
-          4.0,
+          4.4,
+          1
+        ],
+        [
+          "云中君",
+          4.2,
           1
         ],
         [
@@ -4443,7 +4378,7 @@
           3
         ],
         [
-          "狄仁杰",
+          "公孙离",
           0,
           3
         ],
@@ -4463,7 +4398,7 @@
       "counter": [
         [
           "雅典娜",
-          5.6,
+          5.3,
           1
         ],
         [
@@ -4472,14 +4407,9 @@
           1
         ],
         [
-          "哪吒",
-          3.9,
+          "大禹",
+          4.6,
           1
-        ],
-        [
-          "海诺",
-          0,
-          3
         ],
         [
           "盘古",
@@ -4487,7 +4417,12 @@
           3
         ],
         [
-          "铠",
+          "海诺",
+          0,
+          3
+        ],
+        [
+          "元流之子(法师)",
           0,
           3
         ]
@@ -4499,18 +4434,18 @@
     "弈星": {
       "counter": [
         [
-          "盾山",
-          5.0,
-          1
-        ],
-        [
           "明世隐",
-          4.6,
+          5.6,
           1
         ],
         [
           "白起",
-          4.5,
+          5.1,
+          1
+        ],
+        [
+          "盾山",
+          4.8,
           1
         ],
         [
@@ -4519,12 +4454,12 @@
           3
         ],
         [
-          "狄仁杰",
+          "哪吒",
           0,
           3
         ],
         [
-          "姜子牙",
+          "公孙离",
           0,
           3
         ]
@@ -4537,18 +4472,23 @@
       "counter": [
         [
           "蒙恬",
-          5.9,
+          5.8,
           1
         ],
         [
           "海月",
-          4.5,
+          5.2,
           1
         ],
         [
           "空空儿",
-          4.5,
+          5.1,
           1
+        ],
+        [
+          "苍",
+          4.0,
+          2
         ],
         [
           "李信",
@@ -4557,11 +4497,6 @@
         ],
         [
           "老夫子",
-          0,
-          3
-        ],
-        [
-          "盘古",
           0,
           3
         ]
@@ -4574,33 +4509,33 @@
       "counter": [
         [
           "甄姬",
-          7.9,
-          1
-        ],
-        [
-          "公孙离",
-          6.2,
+          7.8,
           1
         ],
         [
           "沈梦溪",
-          5.7,
+          6.6,
           1
         ],
         [
-          "百里守约",
-          5.0,
-          2
+          "公孙离",
+          6.0,
+          1
         ],
         [
           "孙膑",
-          4.1,
+          4.2,
           2
         ],
         [
           "孙尚香",
           2.4,
           2
+        ],
+        [
+          "阿古朵",
+          0,
+          3
         ]
       ],
       "tRanks": {
@@ -4611,22 +4546,22 @@
       "counter": [
         [
           "白起",
-          7.8,
+          7.6,
           1
         ],
         [
           "张良",
-          6.0,
+          5.6,
           1
         ],
         [
           "王昭君",
-          5.7,
+          5.5,
           1
         ],
         [
           "妲己",
-          4.6,
+          4.3,
           2
         ],
         [
@@ -4647,24 +4582,14 @@
     "孙策": {
       "counter": [
         [
-          "百里玄策",
-          5.4,
-          1
-        ],
-        [
           "少司缘",
-          4.1,
+          4.3,
           1
         ],
         [
-          "姬小满",
-          4.0,
+          "百里玄策",
+          4.2,
           1
-        ],
-        [
-          "橘右京",
-          2.3,
-          2
         ],
         [
           "李信",
@@ -4673,6 +4598,16 @@
         ],
         [
           "老夫子",
+          0,
+          3
+        ],
+        [
+          "司马懿",
+          0,
+          3
+        ],
+        [
+          "哪吒",
           0,
           3
         ]
@@ -4686,17 +4621,17 @@
       "counter": [
         [
           "鬼谷子",
-          5.9,
+          6.0,
           1
         ],
         [
           "阿轲",
-          4.6,
+          4.4,
           1
         ],
         [
           "马超",
-          3.9,
+          4.1,
           1
         ],
         [
@@ -4705,12 +4640,12 @@
           3
         ],
         [
-          "狄仁杰",
+          "哪吒",
           0,
           3
         ],
         [
-          "姜子牙",
+          "公孙离",
           0,
           3
         ]
@@ -4723,50 +4658,50 @@
     "盾山": {
       "counter": [
         [
-          "阿古朵",
-          7.4,
-          1
-        ],
-        [
           "元流之子(辅助)",
-          7.2,
+          7.9,
           1
         ],
         [
-          "上官婉儿",
-          5.1,
+          "阿古朵",
+          7.3,
           1
         ],
         [
-          "少司缘",
+          "桑启",
           4.2,
           2
         ],
         [
-          "桑启",
-          4.1,
+          "少司缘",
+          3.9,
           2
         ],
         [
           "艾琳",
-          3.9,
+          3.8,
+          2
+        ],
+        [
+          "孙膑",
+          2.9,
           2
         ]
       ],
       "tRanks": {
-        "4": "T3"
+        "4": "T2"
       }
     },
     "伽罗": {
       "counter": [
         [
           "刘备",
-          5.1,
+          5.4,
           1
         ],
         [
           "海月",
-          5.0,
+          5.2,
           1
         ],
         [
@@ -4785,7 +4720,7 @@
           3
         ],
         [
-          "嫦娥",
+          "铠",
           0,
           3
         ]
@@ -4802,18 +4737,13 @@
           1
         ],
         [
-          "狄仁杰",
-          4.3,
-          1
-        ],
-        [
           "李信",
-          4.2,
+          4.0,
           1
         ],
         [
-          "干将莫邪",
-          4.2,
+          "朵莉亚",
+          2.0,
           2
         ],
         [
@@ -4822,7 +4752,12 @@
           3
         ],
         [
-          "姜子牙",
+          "哪吒",
+          0,
+          3
+        ],
+        [
+          "公孙离",
           0,
           3
         ]
@@ -4835,17 +4770,17 @@
       "counter": [
         [
           "甄姬",
-          5.2,
+          5.3,
           1
         ],
         [
           "吕布",
-          4.9,
+          5.0,
           1
         ],
         [
           "扁鹊",
-          4.3,
+          4.6,
           1
         ],
         [
@@ -4859,7 +4794,7 @@
           3
         ],
         [
-          "盘古",
+          "司马懿",
           0,
           3
         ]
@@ -4871,34 +4806,34 @@
     "上官婉儿": {
       "counter": [
         [
-          "阿古朵",
-          7.6,
-          1
-        ],
-        [
           "姜子牙",
-          7.5,
+          7.8,
           1
         ],
         [
-          "空空儿",
-          5.8,
+          "阿古朵",
+          7.4,
           1
         ],
         [
           "米莱狄",
-          5.7,
-          2
+          5.5,
+          1
         ],
         [
           "虞姬",
-          4.7,
+          4.3,
           2
         ],
         [
-          "李元芳",
-          3.7,
-          2
+          "哪吒",
+          0,
+          3
+        ],
+        [
+          "公孙离",
+          0,
+          3
         ]
       ],
       "tRanks": {
@@ -4909,23 +4844,13 @@
       "counter": [
         [
           "马超",
-          9.2,
-          1
-        ],
-        [
-          "雅典娜",
-          7.3,
+          9.6,
           1
         ],
         [
           "关羽",
-          7.3,
+          6.7,
           1
-        ],
-        [
-          "不知火舞",
-          6.3,
-          2
         ],
         [
           "影",
@@ -4933,53 +4858,48 @@
           2
         ],
         [
-          "韩信",
+          "百里守约",
+          6.1,
+          2
+        ],
+        [
+          "镜",
+          6.1,
+          2
+        ],
+        [
+          "女娲",
+          6.0,
+          2
+        ],
+        [
+          "雅典娜",
           5.9,
           2
         ],
         [
           "哪吒",
-          5.9,
+          5.7,
           2
         ],
         [
           "曜",
-          5.9,
-          2
-        ],
-        [
-          "女娲",
-          5.8,
-          2
-        ],
-        [
-          "镜",
-          5.8,
+          5.7,
           2
         ],
         [
           "暃",
-          5.5,
+          5.7,
           2
         ],
         [
-          "司空震",
-          5.0,
+          "不知火舞",
+          5.1,
           2
         ],
         [
-          "夏洛特",
-          4.2,
-          2
-        ],
-        [
-          "澜",
-          4.2,
-          2
-        ],
-        [
-          "元流之子(射手)",
-          3.8,
+          "桑启",
+          3.4,
           2
         ]
       ],
@@ -4993,22 +4913,22 @@
       "counter": [
         [
           "蒙恬",
-          8.5,
+          8.3,
           1
         ],
         [
           "苍",
-          5.9,
-          1
-        ],
-        [
-          "杨戬",
-          5.2,
+          6.3,
           1
         ],
         [
           "孙策",
-          5.0,
+          4.9,
+          1
+        ],
+        [
+          "杨戬",
+          4.8,
           2
         ],
         [
@@ -5031,12 +4951,12 @@
       "counter": [
         [
           "蚩奼",
-          8.6,
+          8.8,
           1
         ],
         [
           "司马懿",
-          8.6,
+          8.0,
           1
         ],
         [
@@ -5045,28 +4965,28 @@
           1
         ],
         [
-          "高渐离",
-          6.5,
+          "梦奇",
+          6.4,
           2
         ],
         [
-          "元流之子(辅助)",
+          "高渐离",
+          5.9,
+          2
+        ],
+        [
+          "司空震",
           5.4,
           2
         ],
         [
-          "梦奇",
-          5.3,
-          2
-        ],
-        [
-          "澜",
+          "元流之子(辅助)",
           4.8,
           2
         ],
         [
-          "裴擒虎",
-          3.4,
+          "澜",
+          4.5,
           2
         ]
       ],
@@ -5079,7 +4999,7 @@
       "counter": [
         [
           "鬼谷子",
-          8.0,
+          7.8,
           1
         ],
         [
@@ -5088,8 +5008,8 @@
           1
         ],
         [
-          "甄姬",
-          4.6,
+          "哪吒",
+          4.9,
           1
         ],
         [
@@ -5098,12 +5018,12 @@
           2
         ],
         [
-          "阿轲",
+          "庄周",
           0,
           3
         ],
         [
-          "庄周",
+          "元流之子(射手)",
           0,
           3
         ]
@@ -5116,18 +5036,18 @@
       "counter": [
         [
           "猪八戒",
-          6.2,
+          5.7,
           1
         ],
         [
           "李元芳",
-          3.6,
+          4.0,
           1
         ],
         [
-          "白起",
-          3.5,
-          1
+          "盘古",
+          0,
+          3
         ],
         [
           "海诺",
@@ -5135,7 +5055,7 @@
           3
         ],
         [
-          "盘古",
+          "元流之子(法师)",
           0,
           3
         ],
@@ -5157,13 +5077,13 @@
           1
         ],
         [
-          "元歌",
-          2.8,
+          "伽罗",
+          3.0,
           1
         ],
         [
-          "伽罗",
-          2.8,
+          "姜子牙",
+          2.4,
           1
         ],
         [
@@ -5177,7 +5097,7 @@
           3
         ],
         [
-          "盘古",
+          "司马懿",
           0,
           3
         ]
@@ -5191,17 +5111,12 @@
       "counter": [
         [
           "元歌",
-          6.0,
-          1
-        ],
-        [
-          "刘备",
-          5.6,
+          5.8,
           1
         ],
         [
           "亚连",
-          5.3,
+          5.7,
           1
         ],
         [
@@ -5215,45 +5130,50 @@
           3
         ],
         [
-          "盘古",
+          "司马懿",
+          0,
+          3
+        ],
+        [
+          "哪吒",
           0,
           3
         ]
       ],
       "tRanks": {
-        "1": "T3",
-        "5": "T3"
+        "1": "T2",
+        "5": "T2"
       }
     },
     "西施": {
       "counter": [
         [
           "阿古朵",
-          4.6,
+          5.1,
           1
         ],
         [
           "扁鹊",
-          4.5,
+          4.1,
           1
         ],
         [
           "大司命",
-          4.2,
+          4.0,
           1
         ],
         [
-          "狄仁杰",
+          "哪吒",
+          0,
+          3
+        ],
+        [
+          "公孙离",
           0,
           3
         ],
         [
           "姜子牙",
-          0,
-          3
-        ],
-        [
-          "哪吒",
           0,
           3
         ]
@@ -5265,34 +5185,34 @@
     "鲁班大师": {
       "counter": [
         [
-          "蔡文姬",
-          7.2,
-          1
-        ],
-        [
-          "明世隐",
-          6.6,
+          "百里玄策",
+          5.5,
           1
         ],
         [
           "黄忠",
-          6.0,
+          5.0,
           1
         ],
         [
-          "后羿",
-          4.9,
-          2
-        ],
-        [
-          "元流之子(法师)",
-          4.8,
-          2
-        ],
-        [
           "孙尚香",
-          2.7,
+          2.3,
           2
+        ],
+        [
+          "庄周",
+          0,
+          3
+        ],
+        [
+          "元流之子(射手)",
+          0,
+          3
+        ],
+        [
+          "明世隐",
+          0,
+          3
         ]
       ],
       "tRanks": {
@@ -5302,24 +5222,24 @@
     "蒙犽": {
       "counter": [
         [
-          "阿古朵",
-          6.0,
+          "刘备",
+          5.1,
           1
         ],
         [
           "张飞",
-          5.4,
+          4.9,
           1
         ],
         [
-          "盘古",
-          4.5,
-          1
-        ],
-        [
-          "苏烈",
+          "裴擒虎",
           3.9,
           2
+        ],
+        [
+          "阿古朵",
+          0,
+          3
         ],
         [
           "马可波罗",
@@ -5327,7 +5247,7 @@
           3
         ],
         [
-          "嫦娥",
+          "铠",
           0,
           3
         ]
@@ -5340,33 +5260,33 @@
       "counter": [
         [
           "元流之子(法师)",
-          7.7,
+          8.8,
           1
         ],
         [
           "元流之子(射手)",
-          6.1,
+          6.3,
           1
-        ],
-        [
-          "女娲",
-          5.9,
-          1
-        ],
-        [
-          "元歌",
-          5.2,
-          2
         ],
         [
           "弈星",
-          3.9,
+          4.3,
+          2
+        ],
+        [
+          "赵云",
+          3.6,
           2
         ],
         [
           "橘右京",
-          2.8,
+          3.0,
           2
+        ],
+        [
+          "盘古",
+          0,
+          3
         ]
       ],
       "tRanks": {
@@ -5382,33 +5302,28 @@
         ],
         [
           "嬴政",
-          8.2,
-          1
-        ],
-        [
-          "刘备",
-          6.1,
+          7.1,
           1
         ],
         [
           "影",
-          6.1,
-          2
+          6.6,
+          1
         ],
         [
-          "苍",
-          5.7,
-          2
-        ],
-        [
-          "老夫子",
-          5.5,
+          "明世隐",
+          6.5,
           2
         ],
         [
           "小乔",
-          2.2,
+          2.7,
           2
+        ],
+        [
+          "李信",
+          0,
+          3
         ]
       ],
       "tRanks": {
@@ -5419,47 +5334,42 @@
       "counter": [
         [
           "刘备",
-          6.1,
+          6.3,
           1
         ],
         [
           "张良",
-          5.6,
-          1
-        ],
-        [
-          "钟馗",
-          5.4,
+          5.8,
           1
         ],
         [
           "妲己",
-          5.3,
+          5.1,
           2
         ],
         [
           "大司命",
-          5.0,
-          2
-        ],
-        [
-          "虞姬",
-          4.5,
+          4.9,
           2
         ],
         [
           "墨子",
-          4.4,
+          4.7,
           2
         ],
         [
-          "夏侯惇",
+          "虞姬",
           4.2,
           2
         ],
         [
+          "夏侯惇",
+          4.1,
+          2
+        ],
+        [
           "典韦",
-          3.9,
+          4.0,
           2
         ]
       ],
@@ -5472,7 +5382,7 @@
       "counter": [
         [
           "元歌",
-          3.9,
+          4.3,
           1
         ],
         [
@@ -5481,8 +5391,8 @@
           1
         ],
         [
-          "姬小满",
-          2.8,
+          "刘备",
+          3.0,
           1
         ],
         [
@@ -5491,12 +5401,12 @@
           3
         ],
         [
-          "盘古",
+          "司马懿",
           0,
           3
         ],
         [
-          "司马懿",
+          "哪吒",
           0,
           3
         ]
@@ -5509,7 +5419,7 @@
       "counter": [
         [
           "阿古朵",
-          5.2,
+          4.8,
           1
         ],
         [
@@ -5518,8 +5428,8 @@
           1
         ],
         [
-          "赵云",
-          3.4,
+          "空空儿",
+          3.8,
           1
         ],
         [
@@ -5528,12 +5438,12 @@
           3
         ],
         [
-          "铠",
+          "元流之子(法师)",
           0,
           3
         ],
         [
-          "马超",
+          "铠",
           0,
           3
         ]
@@ -5551,12 +5461,12 @@
         ],
         [
           "亚连",
-          5.6,
+          5.5,
           1
         ],
         [
           "哪吒",
-          5.1,
+          5.4,
           1
         ],
         [
@@ -5565,12 +5475,12 @@
           3
         ],
         [
-          "盘古",
+          "司马懿",
           0,
           3
         ],
         [
-          "司马懿",
+          "盘古",
           0,
           3
         ]
@@ -5584,7 +5494,7 @@
       "counter": [
         [
           "典韦",
-          4.5,
+          4.3,
           1
         ],
         [
@@ -5594,8 +5504,13 @@
         ],
         [
           "阿古朵",
-          3.4,
+          4.1,
           1
+        ],
+        [
+          "刘备",
+          0,
+          3
         ],
         [
           "马可波罗",
@@ -5603,12 +5518,7 @@
           3
         ],
         [
-          "嫦娥",
-          0,
-          3
-        ],
-        [
-          "刘备",
+          "铠",
           0,
           3
         ]
@@ -5625,19 +5535,14 @@
           1
         ],
         [
-          "鬼谷子",
-          3.0,
-          1
-        ],
-        [
           "钟馗",
-          3.0,
+          3.2,
           1
         ],
         [
-          "海诺",
-          0,
-          3
+          "鬼谷子",
+          2.9,
+          1
         ],
         [
           "盘古",
@@ -5645,7 +5550,12 @@
           3
         ],
         [
-          "铠",
+          "海诺",
+          0,
+          3
+        ],
+        [
+          "元流之子(法师)",
           0,
           3
         ]
@@ -5658,27 +5568,27 @@
       "counter": [
         [
           "鬼谷子",
-          8.8,
-          1
-        ],
-        [
-          "露娜",
-          7.5,
-          1
-        ],
-        [
-          "鲁班大师",
-          7.2,
+          8.9,
           1
         ],
         [
           "韩信",
-          6.5,
-          2
+          6.7,
+          1
+        ],
+        [
+          "露娜",
+          6.7,
+          1
         ],
         [
           "百里玄策",
           4.9,
+          2
+        ],
+        [
+          "鲁班大师",
+          4.5,
           2
         ],
         [
@@ -5696,23 +5606,18 @@
       "counter": [
         [
           "李白",
-          4.6,
-          1
-        ],
-        [
-          "周瑜",
-          4.3,
+          5.3,
           1
         ],
         [
           "百里守约",
-          4.3,
+          4.4,
           1
         ],
         [
-          "海诺",
-          0,
-          3
+          "周瑜",
+          3.9,
+          2
         ],
         [
           "盘古",
@@ -5720,7 +5625,12 @@
           3
         ],
         [
-          "铠",
+          "海诺",
+          0,
+          3
+        ],
+        [
+          "元流之子(法师)",
           0,
           3
         ]
@@ -5733,31 +5643,31 @@
       "counter": [
         [
           "庄周",
-          5.2,
+          4.9,
           1
         ],
         [
           "阿轲",
-          3.6,
+          3.5,
           1
         ],
         [
-          "哪吒",
+          "女娲",
           2.2,
           1
         ],
         [
-          "鬼谷子",
+          "元流之子(射手)",
           0,
           3
         ],
         [
-          "后羿",
+          "明世隐",
           0,
           3
         ],
         [
-          "蔡文姬",
+          "黄忠",
           0,
           3
         ]
@@ -5774,27 +5684,27 @@
           1
         ],
         [
-          "白起",
-          5.1,
-          1
-        ],
-        [
           "猪八戒",
-          4.7,
+          5.2,
           1
         ],
         [
-          "大禹",
-          4.3,
+          "白起",
+          5.0,
+          1
+        ],
+        [
+          "安琪拉",
+          3.9,
           2
         ],
         [
-          "马可波罗",
+          "刘备",
           0,
           3
         ],
         [
-          "嫦娥",
+          "马可波罗",
           0,
           3
         ]
@@ -5806,78 +5716,78 @@
     "海月": {
       "counter": [
         [
-          "云中君",
-          10.1,
+          "镜",
+          9.8,
           1
         ],
         [
           "元歌",
-          10.0,
+          9.7,
           1
         ],
         [
-          "上官婉儿",
+          "云中君",
           9.5,
           1
         ],
         [
-          "镜",
-          9.4,
-          2
-        ],
-        [
-          "韩信",
-          9.0,
+          "上官婉儿",
+          9.2,
           2
         ],
         [
           "戈娅",
-          9.0,
+          9.2,
+          2
+        ],
+        [
+          "韩信",
+          9.1,
           2
         ],
         [
           "关羽",
-          7.8,
+          7.7,
           2
         ],
         [
           "暃",
-          7.3,
+          7.6,
           2
         ],
         [
           "李白",
-          6.9,
+          7.5,
           2
         ],
         [
           "沈梦溪",
-          6.5,
+          6.3,
           2
         ],
         [
           "杨玉环",
-          5.8,
-          2
-        ],
-        [
-          "姬小满",
-          5.5,
+          5.9,
           2
         ],
         [
           "莱西奥",
-          4.8,
+          5.9,
+          2
+        ],
+        [
+          "姬小满",
+          5.6,
           2
         ],
         [
           "孙权",
-          4.8,
+          4.7,
           2
         ],
         [
-          "金蝉",
-          4.7,
+          "花木兰",
+          4.0,
           2
         ]
       ],
@@ -5888,18 +5798,13 @@
     "赵怀真": {
       "counter": [
         [
-          "李白",
-          4.2,
-          1
-        ],
-        [
-          "云中君",
-          4.1,
-          1
-        ],
-        [
           "百里玄策",
-          4.0,
+          5.0,
+          1
+        ],
+        [
+          "上官婉儿",
+          5.0,
           1
         ],
         [
@@ -5913,7 +5818,12 @@
           3
         ],
         [
-          "盘古",
+          "司马懿",
+          0,
+          3
+        ],
+        [
+          "哪吒",
           0,
           3
         ]
@@ -5928,18 +5838,18 @@
       "counter": [
         [
           "周瑜",
-          4.8,
+          4.6,
           1
         ],
         [
           "东皇太一",
-          3.0,
+          2.9,
           1
         ],
         [
-          "盾山",
-          2.9,
-          1
+          "刘备",
+          0,
+          3
         ],
         [
           "马可波罗",
@@ -5952,7 +5862,7 @@
           3
         ],
         [
-          "嫦娥",
+          "铠",
           0,
           3
         ]
@@ -5964,18 +5874,55 @@
     "姬小满": {
       "counter": [
         [
-          "盘古",
-          5.1,
+          "吕布",
+          4.7,
           1
         ],
         [
-          "元流之子(法师)",
+          "盘古",
           4.5,
           1
         ],
         [
+          "芈月",
+          4.4,
+          1
+        ],
+        [
           "蒙犽",
-          4.3,
+          3.6,
+          2
+        ],
+        [
+          "李信",
+          0,
+          3
+        ],
+        [
+          "老夫子",
+          0,
+          3
+        ]
+      ],
+      "tRanks": {
+        "1": "T3"
+      }
+    },
+    "亚连": {
+      "counter": [
+        [
+          "典韦",
+          6.0,
+          1
+        ],
+        [
+          "黄忠",
+          5.0,
+          1
+        ],
+        [
+          "猪八戒",
+          4.2,
           1
         ],
         [
@@ -5998,72 +5945,35 @@
         "1": "T3"
       }
     },
-    "亚连": {
-      "counter": [
-        [
-          "典韦",
-          5.3,
-          1
-        ],
-        [
-          "黄忠",
-          4.5,
-          1
-        ],
-        [
-          "牛魔",
-          4.0,
-          1
-        ],
-        [
-          "李信",
-          0,
-          3
-        ],
-        [
-          "老夫子",
-          0,
-          3
-        ],
-        [
-          "盘古",
-          0,
-          3
-        ]
-      ],
-      "tRanks": {
-        "1": "T3"
-      }
-    },
     "朵莉亚": {
       "counter": [
         [
           "空空儿",
-          5.0,
+          5.1,
           1
         ],
         [
           "庄周",
-          3.8,
+          3.7,
           1
         ],
         [
-          "杨玉环",
-          2.9,
-          1
-        ],
-        [
-          "阿轲",
+          "元流之子(射手)",
           0,
           3
         ],
         [
-          "鬼谷子",
+          "明世隐",
           0,
           3
         ],
         [
-          "后羿",
+          "黄忠",
+          0,
+          3
+        ],
+        [
+          "元流之子(辅助)",
           0,
           3
         ]
@@ -6076,12 +5986,12 @@
       "counter": [
         [
           "庄周",
-          8.2,
+          8.0,
           1
         ],
         [
           "阿古朵",
-          8.1,
+          7.9,
           1
         ],
         [
@@ -6091,26 +6001,21 @@
         ],
         [
           "廉颇",
-          4.8,
-          2
-        ],
-        [
-          "云缨",
-          4.6,
+          5.1,
           2
         ],
         [
           "夏侯惇",
-          4.2,
+          4.0,
+          2
+        ],
+        [
+          "云缨",
+          4.0,
           2
         ],
         [
           "朵莉亚",
-          2.3,
-          2
-        ],
-        [
-          "项羽",
           2.1,
           2
         ]
@@ -6124,18 +6029,23 @@
       "counter": [
         [
           "戈娅",
-          5.9,
+          6.2,
           1
         ],
         [
           "上官婉儿",
-          5.0,
+          5.3,
           1
         ],
         [
           "马可波罗",
-          4.8,
+          5.0,
           1
+        ],
+        [
+          "刘备",
+          0,
+          3
         ],
         [
           "阿古朵",
@@ -6143,12 +6053,7 @@
           3
         ],
         [
-          "嫦娥",
-          0,
-          3
-        ],
-        [
-          "刘备",
+          "铠",
           0,
           3
         ]
@@ -6161,18 +6066,23 @@
       "counter": [
         [
           "蚩奼",
-          5.1,
-          1
-        ],
-        [
-          "嫦娥",
-          4.4,
+          5.3,
           1
         ],
         [
           "不知火舞",
-          4.4,
+          4.2,
           1
+        ],
+        [
+          "嫦娥",
+          4.1,
+          1
+        ],
+        [
+          "苏烈",
+          3.5,
+          2
         ],
         [
           "钟无艳",
@@ -6183,11 +6093,6 @@
           "项羽",
           2.2,
           2
-        ],
-        [
-          "李信",
-          0,
-          3
         ]
       ],
       "tRanks": {
@@ -6198,22 +6103,22 @@
     "元流之子(法师)": {
       "counter": [
         [
+          "刘备",
+          4.2,
+          1
+        ],
+        [
           "狄仁杰",
           4.0,
           1
         ],
         [
-          "阿古朵",
-          3.4,
-          1
-        ],
-        [
           "敖隐",
-          3.4,
+          3.8,
           1
         ],
         [
-          "姜子牙",
+          "阿古朵",
           0,
           3
         ],
@@ -6223,7 +6128,7 @@
           3
         ],
         [
-          "米莱狄",
+          "公孙离",
           0,
           3
         ]
@@ -6236,17 +6141,17 @@
       "counter": [
         [
           "上官婉儿",
-          7.7,
+          7.6,
           1
         ],
         [
           "海月",
-          6.7,
+          6.6,
           1
         ],
         [
           "关羽",
-          6.4,
+          6.5,
           1
         ],
         [
@@ -6255,12 +6160,12 @@
           2
         ],
         [
-          "孙权",
-          3.7,
-          2
+          "李信",
+          0,
+          3
         ],
         [
-          "李信",
+          "老夫子",
           0,
           3
         ]
@@ -6274,17 +6179,17 @@
       "counter": [
         [
           "马超",
-          5.8,
+          5.7,
           1
         ],
         [
           "阿轲",
-          5.1,
+          4.9,
           1
         ],
         [
           "戈娅",
-          4.6,
+          4.7,
           1
         ],
         [
@@ -6293,12 +6198,12 @@
           3
         ],
         [
-          "鬼谷子",
+          "元流之子(射手)",
           0,
           3
         ],
         [
-          "后羿",
+          "明世隐",
           0,
           3
         ]
@@ -6311,17 +6216,17 @@
       "counter": [
         [
           "东皇太一",
-          3.7,
+          3.6,
+          1
+        ],
+        [
+          "司马懿",
+          3.0,
           1
         ],
         [
           "李信",
-          2.5,
-          1
-        ],
-        [
-          "伽罗",
-          2.5,
+          2.6,
           1
         ],
         [
@@ -6330,12 +6235,12 @@
           3
         ],
         [
-          "盘古",
+          "哪吒",
           0,
           3
         ],
         [
-          "司马懿",
+          "盘古",
           0,
           3
         ]
@@ -6348,18 +6253,13 @@
     "苍": {
       "counter": [
         [
-          "刘备",
-          7.5,
-          1
-        ],
-        [
           "铠",
-          5.9,
+          6.5,
           1
         ],
         [
-          "雅典娜",
-          5.6,
+          "刘备",
+          6.0,
           1
         ],
         [
@@ -6373,9 +6273,14 @@
           2
         ],
         [
-          "孙膑",
-          2.7,
-          2
+          "阿古朵",
+          0,
+          3
+        ],
+        [
+          "亚连",
+          0,
+          3
         ]
       ],
       "tRanks": {
@@ -6387,37 +6292,32 @@
       "counter": [
         [
           "张良",
-          10.2,
+          7.7,
           1
         ],
         [
-          "阿轲",
+          "东皇太一",
           5.7,
           1
         ],
         [
           "钟馗",
-          5.2,
+          5.5,
           1
         ],
         [
-          "云中君",
-          4.8,
-          2
-        ],
-        [
-          "东皇太一",
+          "大禹",
           4.7,
           2
         ],
         [
-          "安琪拉",
+          "元流之子(射手)",
           4.5,
           2
         ],
         [
           "赵云",
-          3.4,
+          3.6,
           2
         ]
       ],
@@ -6429,7 +6329,7 @@
       "counter": [
         [
           "阿古朵",
-          5.1,
+          5.3,
           1
         ],
         [
@@ -6439,8 +6339,13 @@
         ],
         [
           "元歌",
-          3.5,
+          3.4,
           1
+        ],
+        [
+          "刘备",
+          0,
+          3
         ],
         [
           "马可波罗",
@@ -6448,12 +6353,7 @@
           3
         ],
         [
-          "嫦娥",
-          0,
-          3
-        ],
-        [
-          "刘备",
+          "铠",
           0,
           3
         ]
@@ -6466,12 +6366,12 @@
       "counter": [
         [
           "庄周",
-          4.3,
+          4.7,
           1
         ],
         [
           "海诺",
-          3.5,
+          3.6,
           1
         ],
         [
@@ -6480,17 +6380,17 @@
           1
         ],
         [
-          "桑启",
-          3.3,
-          2
-        ],
-        [
           "朵莉亚",
-          2.1,
+          2.2,
           2
         ],
         [
-          "马可波罗",
+          "刘备",
+          0,
+          3
+        ],
+        [
+          "阿古朵",
           0,
           3
         ]
@@ -6503,22 +6403,17 @@
       "counter": [
         [
           "司马懿",
-          6.4,
+          6.3,
           1
         ],
         [
           "阿古朵",
-          5.4,
-          1
-        ],
-        [
-          "貂蝉",
-          4.5,
+          5.2,
           1
         ],
         [
           "元流之子(刺客)",
-          3.3,
+          3.7,
           2
         ],
         [
@@ -6530,44 +6425,49 @@
           "老夫子",
           0,
           3
+        ],
+        [
+          "哪吒",
+          0,
+          3
         ]
       ],
       "tRanks": {
-        "1": "T1",
-        "5": "T1"
+        "1": "T2",
+        "5": "T2"
       }
     },
     "元流之子(辅助)": {
       "counter": [
         [
-          "庄周",
-          5.8,
+          "空空儿",
+          6.8,
           1
         ],
         [
-          "哪吒",
-          4.8,
+          "庄周",
+          6.5,
           1
         ],
         [
           "百里守约",
-          4.5,
+          6.4,
           1
         ],
         [
           "苍",
-          4.4,
-          2
-        ],
-        [
-          "廉颇",
-          4.3,
+          4.5,
           2
         ],
         [
           "敖隐",
-          4.2,
+          3.9,
           2
+        ],
+        [
+          "元流之子(射手)",
+          0,
+          3
         ]
       ],
       "tRanks": {
@@ -6578,21 +6478,21 @@
       "counter": [
         [
           "百里守约",
-          2.6,
+          2.8,
           1
         ],
         [
-          "鬼谷子",
+          "高渐离",
           2.5,
           1
         ],
         [
-          "李白",
-          2.4,
+          "雅典娜",
+          2.5,
           1
         ],
         [
-          "阿轲",
+          "元流之子(射手)",
           0,
           3
         ],
@@ -6602,7 +6502,7 @@
           3
         ],
         [
-          "后羿",
+          "明世隐",
           0,
           3
         ]
@@ -6615,23 +6515,18 @@
       "counter": [
         [
           "女娲",
-          3.8,
+          3.9,
           1
         ],
         [
           "元歌",
-          3.2,
+          3.6,
           1
         ],
         [
           "百里守约",
-          3.0,
+          3.2,
           1
-        ],
-        [
-          "海诺",
-          0,
-          3
         ],
         [
           "盘古",
@@ -6639,7 +6534,12 @@
           3
         ],
         [
-          "铠",
+          "海诺",
+          0,
+          3
+        ],
+        [
+          "元流之子(法师)",
           0,
           3
         ]
